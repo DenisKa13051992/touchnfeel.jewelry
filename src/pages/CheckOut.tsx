@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function NotFound() {
+function CheckOut() {
   return (
     <>
-      <h1>Not found page</h1>
+      <h1>Check out page</h1>
       <Link to="/">Go Welcome page</Link>
     </>
   );
 }
 
-export default NotFound;
+export default CheckOut;
