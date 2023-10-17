@@ -7,6 +7,6 @@ import App from './App';
 describe('App', async () => {
   it('render', async () => {
     render(<App />);
-    expect(screen.getByRole('heading')).toHaveTextContent('Home page');
+    expect(screen.getByText('Welcome page'));
   });
 });
