@@ -1,5 +1,38 @@
-.header_links {
-width: 100vw;
-height: 30px;
-background-color: black;
+
+.header__panel-content {
+  height: 84px;
+  display: grid;
+  grid-template-columns: 160px 80px 290px 154px 380px 28px 108px;
+  grid-template-areas: 'logo space-one navigation space-two search space-three user';
+  justify-content: center;
+  align-items: center;
+
+  & .header__panel-logo {
+    grid-area: logo;
+  }
+
+  & .header__panel-grid-space-one {
+    grid-area: space-one;
+  }
+
+  & .header__panel-navigation {
+    grid-area: navigation;
+  }
+
+  & .header__panel-grid-space-two {
+    grid-area: space-two;
+  }
+
+  &.header__panel-search {
+    grid-area: search;
+  }
+
+  & .header__panel-grid-space-three {
+    grid-area: space-three;
+  }
+
+  & .header__panel-user {
+    grid-area: user;
+  }
+
 }
