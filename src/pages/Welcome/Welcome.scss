@@ -1,0 +1,10 @@
+.welcome__one {
+  background-image: url("/src/assets/bg-woman.png");
+  background-size: cover;
+
+  & .welcome__one-content {
+    max-width: 517px;
+    height: 244px;
+  }
+
+}

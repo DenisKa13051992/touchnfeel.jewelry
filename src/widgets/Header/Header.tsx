@@ -12,7 +12,7 @@ function Header() {
   return (
     <header className="header flex flex-col w-full h-32">
       <div className="header__promotion flex flex-row w-full bg-black h-11 justify-center items-center text-xs text-white font-normal">
-        <div className="header-promotion-content w-300 flex flex-row justify-center items-center relative">
+        <div className="header-promotion-content w-cont flex flex-row justify-center items-center relative">
           <h3 className="header__promotion-title">
             FREE SHIPPING OVER 50 EURO
           </h3>
@@ -25,7 +25,7 @@ function Header() {
         </div>
       </div>
       <div className="header__panel flex flex-row w-full justify-center items-center">
-        <div className="header__panel-content w-300 h-full flex flex-row justify-center items-center">
+        <div className="header__panel-content w-cont h-full flex flex-row justify-center items-center">
           <div className="header__panel-logo h-full flex flex-row justify-center items-center">
             <Link to="/">
               <img src={Monushe} alt="Monushe" />

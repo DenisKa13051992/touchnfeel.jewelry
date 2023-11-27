@@ -8,10 +8,20 @@ module.exports = {
     extend: {
       colors: {
         'black': '#303030',
-        'border': '#D7DADD'
+        'border': '#D7DADD',
+        'brown': "#CBAC86"
       },
       width: {
-        '300': '75rem',
+        'cont': '1200px',
+        'bgr': '1600px'
+      },
+      height: {
+        '720': '720px',
+        '1600': '1600px'
+      },
+      backgroundImage: {
+        'bgWoman': "url('assets/bg-woman.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
       }
     },
   },
