@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function CheckOut() {
+function Cart() {
   return (
     <>
-      <h1>Check out page</h1>
+      <h1>Cart page</h1>
       <Link to="/">Go Welcome page</Link>
     </>
   );
 }
 
-export default CheckOut;
+export default Cart;

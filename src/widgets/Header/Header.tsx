@@ -27,7 +27,9 @@ function Header() {
       <div className="header__panel flex flex-row w-full justify-center items-center">
         <div className="header__panel-content w-300 h-full flex flex-row justify-center items-center">
           <div className="header__panel-logo h-full flex flex-row justify-center items-center">
-            <img src={Monushe} alt="Monushe" />
+            <Link to="/">
+              <img src={Monushe} alt="Monushe" />
+            </Link>
           </div>
           <div className="header__panel-grid-space-one" />
           <nav className="header__panel-navigation flex flex-row h-full justify-center items-center">
@@ -47,7 +49,7 @@ function Header() {
             </ul>
           </nav>
           <div className="header__panel-grid-space-two" />
-          <div className="header__panel-search w-full relative h-11 flex items-center">
+          <div className="header__panel-search w-full relative h-11 flex items-center border-solid border-border border rounded">
             <img
               src={SearchLogo}
               alt="search logo"
@@ -73,18 +75,22 @@ function Header() {
               />
             </li>
             <li className="header__panel-favorites">
-              <img
-                src={HeartLogo}
-                alt="favorites logo"
-                className="header-panel-search-logo"
-              />
+              <Link to="Favorites">
+                <img
+                  src={HeartLogo}
+                  alt="favorites logo"
+                  className="header-panel-search-logo"
+                />
+              </Link>
             </li>
             <li className="header__panel-user-carts">
-              <img
-                src={CartLogo}
-                alt="carts logo"
-                className="header-panel-search-logo"
-              />
+              <Link to="Cart">
+                <img
+                  src={CartLogo}
+                  alt="cart logo"
+                  className="header-panel-search-logo"
+                />
+              </Link>
             </li>
           </ul>
         </div>

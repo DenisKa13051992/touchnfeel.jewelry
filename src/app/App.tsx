@@ -6,11 +6,12 @@ import Footer from 'widgets/Footer/Footer';
 import Welcome from 'pages/Welcome';
 import NotFound from 'pages/NotFound';
 import Shop from 'src/pages/Shop';
-import CheckOut from 'pages/CheckOut';
+import Cart from 'src/pages/Cart';
 import Contacts from 'pages/Contacts';
 import SingleProduct from 'pages/SingleProduct';
 import About from 'src/pages/About';
 import Blog from 'src/pages/Blog';
+import FavoriteProducts from 'src/pages/FavoriteProducts';
 
 function App() {
   return (
@@ -21,11 +22,12 @@ function App() {
           <Route path="/" element={<Welcome />} />
           <Route path="/404" element={<NotFound />} />
           <Route path="/Shop" element={<Shop />} />
-          <Route path="/CheckOut" element={<CheckOut />} />
+          <Route path="/Cart" element={<Cart />} />
           <Route path="/Contacts" element={<Contacts />} />
           <Route path="/SingleProduct" element={<SingleProduct />} />
           <Route path="/About" element={<About />} />
           <Route path="/Blog" element={<Blog />} />
+          <Route path="/Favorites" element={<FavoriteProducts />} />
         </Routes>
       </BrowserRouter>
       <Footer />
