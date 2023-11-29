@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Welcome.scss';
 import Button from 'src/shared/Button';
 

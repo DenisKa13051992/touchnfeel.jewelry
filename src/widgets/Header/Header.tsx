@@ -49,7 +49,7 @@ function Header() {
             </ul>
           </nav>
           <div className="header__panel-grid-space-two" />
-          <div className="header__panel-search w-full relative h-11 flex items-center border-solid border-border border rounded">
+          <div className="header__panel-search w-full relative h-11 flex items-center border-solid border-border border rounded p-0.5">
             <img
               src={SearchLogo}
               alt="search logo"
