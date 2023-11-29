@@ -22,6 +22,20 @@ module.exports = {
       backgroundImage: {
         'bgWoman': "url('assets/bg-woman.png')",
         'footer-texture': "url('/img/footer-texture.png')",
+      },
+      fontSize: {
+        'h1': ['48px', {
+          lineHeight: '56px',
+          fontWeight: 'bold',
+        }],
+        'h3': ['32px', {
+          lineHeight: '40px',
+          fontWeight: '600',
+        }],
+        'basicMedium': ['16px', {
+          lineHeight: '24px',
+          fontWeight: '500',
+        }],
       }
     },
   },
