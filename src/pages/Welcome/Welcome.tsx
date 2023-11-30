@@ -2,6 +2,13 @@ import React from 'react';
 import './Welcome.scss';
 import Button from 'src/shared/Button';
 import CatalogItem from 'src/shared/CatalogItem';
+import rings from 'assets/welcome-two-rings.png';
+import earrings from 'assets/welcome-two-earrings.png';
+import chains from 'assets/welcome-two-chains.png';
+import necklace from 'assets/welcome-two-necklace.png';
+import pendants from 'assets/welcome-two-pendants.png';
+import brooches from 'assets/welcome-two-brooches.png';
+import bracelets from 'assets/welcome-two-bracelets.png';
 
 function checkAPI() {
   fetch(
@@ -14,13 +21,13 @@ function checkAPI() {
 function Welcome() {
   checkAPI();
   const welcomeTwoCatalogItems: string[] = [
-    '/src/assets/welcome-two-rings.png',
-    '/src/assets/welcome-two-earrings.png',
-    '/src/assets/welcome-two-chains.png',
-    '/src/assets/welcome-two-necklace.png',
-    '/src/assets/welcome-two-pendants.png',
-    '/src/assets/welcome-two-brooches.png',
-    '/src/assets/welcome-two-bracelets.png',
+    rings,
+    earrings,
+    chains,
+    necklace,
+    pendants,
+    brooches,
+    bracelets,
   ];
   return (
     <main className="welcome flex flex-col items-center">
