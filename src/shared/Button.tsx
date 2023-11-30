@@ -5,7 +5,7 @@ function Button(data: { name: string }) {
   return (
     <button
       type="button"
-      className={`px-10 py-3.5 text-white bg-brown border-solid border border-transparent rounded text-base leading-6 font-semibold button-${name}`}
+      className={`w-min whitespace-nowrap px-10 py-3.5 text-white bg-brown border-solid border border-transparent rounded text-largeButton button-${name}`}
     >
       {name}
     </button>

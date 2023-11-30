@@ -28,6 +28,10 @@ module.exports = {
           lineHeight: '56px',
           fontWeight: 'bold',
         }],
+        'h2': ['40px', {
+          lineHeight: '48px',
+          fontWeight: '600',
+        }],
         'h3': ['32px', {
           lineHeight: '40px',
           fontWeight: '600',
@@ -36,6 +40,14 @@ module.exports = {
           lineHeight: '24px',
           fontWeight: '500',
         }],
+        'largeButton': ['16px', {
+          lineHeight: '24px',
+          fontWeight: '600',
+        }],
+        'h5': ['16px', {
+          lineHeight: '24px',
+          fontWeight: '400',
+        }]
       }
     },
   },
