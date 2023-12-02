@@ -3,6 +3,7 @@ import './Welcome.scss';
 import Button from 'src/shared/Button';
 import CatalogItem from 'src/shared/CatalogItem';
 import WelcomeAdvantages from 'src/shared/WelcomeAdvantages';
+import FashionCart from 'src/shared/FashionCart';
 import sectionFiveGirl from 'assets/welcome-five-girl.png';
 import rings from 'assets/welcome-two-rings.png';
 import earrings from 'assets/welcome-two-earrings.png';
@@ -22,6 +23,8 @@ import delivery from 'assets/welcome-six-delivery.png';
 import payment from 'assets/welcome-six-payment.png';
 import guarantee from 'assets/welcome-six-guarantee.png';
 import support from 'assets/welcome-six-support.png';
+import eightLeftPhoto from 'assets/welcome-eight-left.png';
+import eightRightPhoto from 'assets/welcome-eight-right.png';
 
 function checkAPI() {
   fetch(
@@ -79,6 +82,21 @@ function Welcome() {
     'We return money within 30 days',
     'Get free shipping over 50 EUR',
   ];
+  const welcomeEightItems: string[] = [eightLeftPhoto, eightRightPhoto];
+  const welcomeEightItemsTitles: string[] = [
+    'Jewelry Care Tips',
+    'Selecting Jewelry for Special Events',
+  ];
+  const welcomeEightItemsDescriptions: string[] = [
+    'In the realm of timeless elegance, caring for your jewelry is an art that ensures your precious pieces remain radiant for generations. While jewelry adds a touch of glamour to our lives, a little care can go a long way in preserving their beauty.',
+    'Jewelry possesses a unique ability to elevate any special occasion, transforming an outfit into a statement and a moment into a memory. Choosing the right pieces for those significant events requires a delicate balance of style, sentiment, and sophistication.',
+  ];
+  const welcomeEightItemsCategory: string[] = ['Lifestyle', 'Fashion'];
+  const welcomeEightItemsDate: string[] = [
+    'September 20, 2023',
+    'August 11, 2023',
+  ];
+  const welcomeEightItemsComments: number[] = [0, 2];
   return (
     <main className="welcome flex flex-col items-center">
       <section className="welcome__one w-full h-720 flex flex-row justify-center">
@@ -91,7 +109,7 @@ function Welcome() {
               EXPRESS YOUR STYLE WITH OUR JEWELRY
             </h1>
             <div className="welcome__one-button">
-              <Button name="Shop now" />
+              <Button name="Shop now" color="brown" />
             </div>
           </div>
         </div>
@@ -119,7 +137,7 @@ function Welcome() {
             love and attention to detail. Find the perfect ring that will
             symbolize your unique love.
           </h5>
-          <Button name="View collections" />
+          <Button name="View collections" color="brown" />
         </div>
         <div className="welcome__three-picture flex flex-row items-start justify-end">
           <img src={ring} alt="giving ring" />
@@ -158,7 +176,7 @@ function Welcome() {
               commitment to affordability ensure you can enjoy effortlessly
               wearable, long-lasting jewelry for yourself and your loved ones
             </h5>
-            <Button name="Explore our journey" />
+            <Button name="Explore our journey" color="brown" />
           </div>
           <div className="welcome__five-photo w-1/2 flex flex-row justify-end">
             <img src={sectionFiveGirl} alt="girl" />
@@ -177,7 +195,40 @@ function Welcome() {
           );
         })}
       </section>
-      <section className="welcome__seven mt-[122px]" />
+      <section className="welcome__seven mt-[122px] h-[680px] w-full flex flex-row justify-center">
+        <div className="welcome__seven-container w-cont flex flex-row h-full justify-end items-center">
+          <div className="welcome__seven-content h-[236px] w-[488px] flex flex-col justify-between">
+            <h2 className="welcome__seven-title text-h2">
+              GET 30% OFF YOUR FIRST ORDER! USE CODE{' '}
+              <span className="font-bold">&apos;FIRST30&apos;</span> AT CHECKOUT
+            </h2>
+            <Button name="Shop now" color="black" />
+          </div>
+        </div>
+      </section>
+      <section className="welcome__eight mt-[180px] h-[677px] w-cont flex flex-col justify-between">
+        <h2 className="welcome__eight-title text-h2 text-center">
+          FASHION BLOG
+        </h2>
+        <div className="welcome__eight-container min-h-[563px] w-full flex flex-col justify-between items-center">
+          <div className="welcome__eight-content grid grid-cols-2 gap-5">
+            {welcomeEightItems.map((item, index) => {
+              return (
+                <FashionCart
+                  product={item}
+                  description={welcomeEightItemsDescriptions[index]}
+                  title={welcomeEightItemsTitles[index]}
+                  category={welcomeEightItemsCategory[index]}
+                  date={welcomeEightItemsDate[index]}
+                  comments={welcomeEightItemsComments[index]}
+                  key={item}
+                />
+              );
+            })}
+          </div>
+          <Button name="Read our blog" color="brown" />
+        </div>
+      </section>
     </main>
   );
 }

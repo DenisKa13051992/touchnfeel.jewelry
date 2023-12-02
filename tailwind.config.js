@@ -9,11 +9,11 @@ module.exports = {
       colors: {
         'black': '#303030',
         'border': '#D7DADD',
-        'brown': "#CBAC86"
+        'brown': "#CBAC86",
       },
       width: {
         'cont': '1200px',
-        'bgr': '1600px'
+        'bgr': '1600px',
       },
       height: {
         '720': '720px',
@@ -51,6 +51,10 @@ module.exports = {
         'largeButton': ['16px', {
           lineHeight: '24px',
           fontWeight: '600',
+        }],
+        'small': ['14px', {
+          lineHeight: '20px',
+          fontWeight: '400',
         }],
       },
       fontFamily: {
