@@ -129,12 +129,12 @@ function Welcome() {
       </section>
       <section className="welcome__five w-full h-[624px] relative flex flex-row justify-center items-center mt-[180px]">
         <div className="welcome__five-background w-[1197px] h-[624px] absolute bg-brown/20 left-0 z-[-1]" />
-        <div className="welcome__five-container w-cont h-[472px] flex flex-row items-center">
-          <div className="welcome__five-content w-[488px] h-[268px] flex flex-col justify-between">
-            <h3 className="welcome__three-title text-h3 min-w-[285px] flex flex-col justify-between items-center pr-4">
+        <div className="welcome__five-container w-cont h-[472px] flex flex-row items-center justify-between">
+          <div className="welcome__five-content w-[488px] h-[268px] flex flex-col">
+            <h3 className="welcome__three-title text-h3 flex text-left pr-4">
               OUR STORY
             </h3>
-            <h5 className="welcome__three-description text-h5 min-w-[285px] flex items-center pr-4">
+            <h5 className="welcome__three-description text-h5 min-w-[285px] flex items-center pr-4 mb-10 mt-4">
               At MONUSHÉ, we redefine jewelry by creating high-quality,
               limited-edition pieces without unnecessary markups. <br /> Our
               commitment to affordability ensure you can enjoy effortlessly
@@ -142,7 +142,7 @@ function Welcome() {
             </h5>
             <Button name="Explore our journey" />
           </div>
-          <div className="welcome__five-photo w-1/2">
+          <div className="welcome__five-photo w-1/2 flex flex-row justify-end">
             <img src={sectionFiveGirl} alt="girl" />
           </div>
         </div>

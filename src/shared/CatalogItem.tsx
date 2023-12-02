@@ -1,4 +1,6 @@
 import React from 'react';
+import like from 'assets/like.png';
+import dislike from 'assets/dislike.png';
 
 function CatalogItem(data: {
   product: string;
@@ -17,11 +19,20 @@ function CatalogItem(data: {
       <h4 className="welcome__two-catalog-number text-basicMedium text-black w-full">{`0${
         index + 1
       }`}</h4>
-      <img
-        src={product}
-        alt={`catalog-${productName}`}
-        className={`welcome__two-catalog-img min-w-[${itemSize}] max-w-none border-solid border border-transparent rounded`}
-      />
+      <div className="welcome__two-catalog-img-container relative">
+        <img
+          src={product}
+          alt={`catalog-${productName}`}
+          className={`welcome__two-catalog-img min-w-[${itemSize}] max-w-none border-solid border border-transparent rounded`}
+        />
+        {itemSize === '387px' && (
+          <img
+            src={dislike}
+            alt="add to favorites"
+            className="min-w-[32px] absolute bottom-4 right-4"
+          />
+        )}
+      </div>
       {description && (
         <div className="welcome__two-catalog-description font-medium font-lato text-[18px] leading-6 w-full">
           {description}
