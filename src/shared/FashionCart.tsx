@@ -13,11 +13,7 @@ function FashionCart(data: {
   const commentsNumber = comments || 'No';
   return (
     <div className="welcome__eight-content min-h-[471px] flex flex-col items-center">
-      <img
-        src={product}
-        alt=""
-        className="border-solid border border-transparent rounded-t"
-      />
+      <img src={product} alt="" className="border-solid border-0 rounded-t" />
       <div className="welcome__eight-info w-[542px] h-[125px] flex flex-col mt-6">
         <h4 className="welcome__eight-info-title text-h4">{title}</h4>
         <div className="welcome__eight-links flex flex-row justify-start items-center gap-[14px] w-full mt-3 mb-4">
