@@ -2,6 +2,7 @@ import React from 'react';
 import './Welcome.scss';
 import Button from 'src/shared/Button';
 import CatalogItem from 'src/shared/CatalogItem';
+import WelcomeAdvantages from 'src/shared/WelcomeAdvantages';
 import sectionFiveGirl from 'assets/welcome-five-girl.png';
 import rings from 'assets/welcome-two-rings.png';
 import earrings from 'assets/welcome-two-earrings.png';
@@ -17,6 +18,10 @@ import necklaceLoveSymbol from 'assets/welcome-four-necklace_love_symbol.png';
 import earringsPearlBay from 'assets/welcome-four-earrings_pearl_bay.png';
 import earringsMoonlight from 'assets/welcome-four-earrings_moonlight.png';
 import chainSophistication from 'assets/welcome-four-chain_sophistication.png';
+import delivery from 'assets/welcome-six-delivery.png';
+import payment from 'assets/welcome-six-payment.png';
+import guarantee from 'assets/welcome-six-guarantee.png';
+import support from 'assets/welcome-six-support.png';
 
 function checkAPI() {
   fetch(
@@ -60,6 +65,19 @@ function Welcome() {
     '€65,15 EUR',
     '€50,25 EUR',
     '€30,11 EUR',
+  ];
+  const welcomeSixItems: string[] = [delivery, payment, guarantee, support];
+  const welcomeSixItemsTitles: string[] = [
+    'Secure online payment',
+    '24/7 Customer support',
+    'Money back guarantee',
+    'Fast worldwide shipping',
+  ];
+  const welcomeSixItemsDescriptions: string[] = [
+    'Accept all major credit cards',
+    'Friendly 24/7 customer support',
+    'We return money within 30 days',
+    'Get free shipping over 50 EUR',
   ];
   return (
     <main className="welcome flex flex-col items-center">
@@ -147,8 +165,19 @@ function Welcome() {
           </div>
         </div>
       </section>
-      <section className="welcome__six mt-[196px]" />
-      <section className="welcome__seven" />
+      <section className="welcome__six mt-[196px] flex flex-row justify-between w-cont">
+        {welcomeSixItems.map((item, index) => {
+          return (
+            <WelcomeAdvantages
+              product={item}
+              description={welcomeSixItemsDescriptions[index]}
+              title={welcomeSixItemsTitles[index]}
+              key={item}
+            />
+          );
+        })}
+      </section>
+      <section className="welcome__seven mt-[122px]" />
     </main>
   );
 }

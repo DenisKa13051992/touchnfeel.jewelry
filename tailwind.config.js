@@ -36,6 +36,14 @@ module.exports = {
           lineHeight: '40px',
           fontWeight: '600',
         }],
+        'h4': ['20px', {
+          lineHeight: '28px',
+          fontWeight: '600',
+        }],
+        'h5': ['16px', {
+          lineHeight: '24px',
+          fontWeight: '400',
+        }],
         'basicMedium': ['16px', {
           lineHeight: '24px',
           fontWeight: '500',
@@ -44,10 +52,6 @@ module.exports = {
           lineHeight: '24px',
           fontWeight: '600',
         }],
-        'h5': ['16px', {
-          lineHeight: '24px',
-          fontWeight: '400',
-        }]
       },
       fontFamily: {
         'lato': ['lato', 'sans-serif'],
