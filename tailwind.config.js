@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
 module.exports = {
   content: [
     "./index.html",
@@ -9,7 +10,7 @@ module.exports = {
       colors: {
         'black': '#303030',
         'border': '#D7DADD',
-        'brown': "#CBAC86",
+        'brown': '#CBAC86',
       },
       width: {
         'cont': '1200px',
@@ -22,6 +23,13 @@ module.exports = {
       backgroundImage: {
         'bgWoman': "url('assets/bg-woman.png')",
         'footer-texture': "url('/img/footer-texture.png')",
+      },
+      backgroundColor: {
+        'black': '#303030',
+        'brown': '#CBAC86',
+      },
+      borderColor: {
+        'border': '#D7DADD',
       },
       fontSize: {
         'h1': ['48px', {
