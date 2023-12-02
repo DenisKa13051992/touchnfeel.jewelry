@@ -109,7 +109,7 @@ function Welcome() {
               EXPRESS YOUR STYLE WITH OUR JEWELRY
             </h1>
             <div className="welcome__one-button">
-              <Button name="Shop now" color="[#CBAC86]" />
+              <Button name="Shop now" color="brown" />
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ function Welcome() {
               commitment to affordability ensure you can enjoy effortlessly
               wearable, long-lasting jewelry for yourself and your loved ones
             </h5>
-            <Button name="Explore our journey" color="[#CBAC86]" />
+            <Button name="Explore our journey" color="brown" />
           </div>
           <div className="welcome__five-photo w-1/2 flex flex-row justify-end">
             <img src={sectionFiveGirl} alt="girl" />
@@ -226,7 +226,7 @@ function Welcome() {
               );
             })}
           </div>
-          <Button name="Read our blog" color="[#CBAC86]" />
+          <Button name="Read our blog" color="brown" />
         </div>
       </section>
     </main>
