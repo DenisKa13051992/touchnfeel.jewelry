@@ -7,9 +7,10 @@ function CatalogItem(data: {
   index: number;
   description?: string;
   price?: string;
+  name?: string;
 }) {
-  const { product, index, description, price } = data;
-  const itemSize = product.includes('two') ? '285px' : '387px';
+  const { product, index, description, price, name } = data;
+  const itemSize = !price ? '285px' : '387px';
   return (
     <div className="border-solid welcome__two-catalog-item flex flex-col justify-between items-start h-full">
       <h4 className="welcome__two-catalog-number text-basicMedium text-black w-full">{`0${
@@ -34,6 +35,11 @@ function CatalogItem(data: {
             alt="add to favorites"
             className="min-w-[32px] absolute bottom-4 right-4"
           />
+        )}
+        {name && (
+          <h5 className="welcome_two-catalog-item-name h-[36px] w-full absolute bottom-[18px] text-h5 font-semibold bg-white opacity-60 flex justify-center items-center text-[#000000]">
+            {name}
+          </h5>
         )}
       </div>
       {description && (

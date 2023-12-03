@@ -4,6 +4,10 @@ import Button from 'src/shared/Button';
 import CatalogItem from 'src/shared/CatalogItem';
 import WelcomeAdvantages from 'src/shared/WelcomeAdvantages';
 import FashionCart from 'src/shared/FashionCart';
+import paymentLogo from 'assets/payment-logo.svg';
+import deliveryLogo from 'assets/delivery-logo.svg';
+import guaranteeLogo from 'assets/guarantee-logo.svg';
+import supportLogo from 'assets/support-logo.svg';
 
 // function checkAPI() {
 //   fetch('http://localhost:3000/profile')
@@ -14,13 +18,22 @@ import FashionCart from 'src/shared/FashionCart';
 function Welcome() {
   // checkAPI();
   const welcomeTwoCatalogItems: string[] = [
-    'https://sun9-69.userapi.com/impg/Tex7NEIkWwQvA-05oJhAdUQ-qi8umn4PM-pmKw/pul61De3p2c.jpg?size=285x320&quality=95&sign=d2335ec29d1d428f049a07f2737592c7&type=album',
-    'https://sun9-5.userapi.com/impg/82yieP4ctVhVhR0WAygi_lQHACzrDkVCkKE8bw/UM13sgEJ1pc.jpg?size=285x320&quality=95&sign=39b5cddc02e5f00bdb08edee433c1c0d&type=album',
-    'https://sun9-29.userapi.com/impg/YRP3GQfnwNzdueRyGl2iXkGmeNlEK9lT1AZ64Q/5c27MI563tg.jpg?size=285x320&quality=95&sign=585f5999bf4c50cb003f743728100d4d&type=album',
-    'https://sun9-61.userapi.com/impg/VFcqzm9nIFmWDhZWDokh6IjqCHKcZ24Y3eRHTA/0fOI9A36mfg.jpg?size=285x320&quality=95&sign=b331f62f9ec47dcac50781196b53f168&type=album',
-    'https://sun9-62.userapi.com/impg/8RZPj0FiDLgykDXfC7LWIIxO_SY1fCLGkb3K5Q/1Je-u5qapdI.jpg?size=285x320&quality=95&sign=3d7278032aa2ea4373579662d9aca585&type=album',
-    'https://sun9-21.userapi.com/impg/UlNL8p7Q__r-qD-WdlXhn5X7UpKahSTTky1W-Q/-RussPbUQ44.jpg?size=285x320&quality=95&sign=398c44fd70bc4c435f5618d3d87db1cf&type=album',
-    'https://sun9-78.userapi.com/impg/S9zHQKJMacHUDPJ2AFM58gEdKh8iEox_avcZsA/T5qT1BwEl0A.jpg?size=285x320&quality=95&sign=b55f2ef3cab79d3784eb3d511ae85417&type=album',
+    'https://sun9-60.userapi.com/impg/digxtgTiM4Ka3OA5L4Q71oBQ36tcjNl_p84XRw/d8O4vSwACY8.jpg?size=285x320&quality=95&sign=6a8b6a5c1ba55cea4f7d693e0d20f5a6&type=album',
+    'https://sun9-32.userapi.com/impg/g_m3q895b4zpvXstMXYUrLf7bmlegE-TmLfCfw/CqqPKagxH0I.jpg?size=285x320&quality=95&sign=c0d50a76994df3fa11861699d9b23af2&type=album',
+    'https://sun9-4.userapi.com/impg/FhKLUtKTgviRgLtDjtGm1U2RbapPs9Po8l1W0Q/YVKKk-v9j1I.jpg?size=285x320&quality=95&sign=3378d1c8f6d1a98323e130ece4940bf9&type=album',
+    'https://sun9-72.userapi.com/impg/_TYU8PZBYkj8fKsgV9Zh619BnYVtnPDL_ArfkA/ESjrsByQ_ls.jpg?size=285x320&quality=95&sign=dd33108d7a008f89ec62cda21a0808c7&type=album',
+    'https://sun9-55.userapi.com/impg/FNCrrruZfFQYE5JzVHYjLzrjcYNFkKdulZDW3Q/d5iVvGIpCsQ.jpg?size=285x320&quality=95&sign=3a9a781f577e66b7cc908b891fbc0b8c&type=album',
+    'https://sun9-20.userapi.com/impg/ePiEEKC8AZRrEpXS0RKloKY34AxDkzfYhQyIqg/uJ-GkFwA9Yg.jpg?size=285x320&quality=95&sign=b3b54aea0d941743cc68d313cb6f6cdf&type=album',
+    'https://sun9-28.userapi.com/impg/JlvvB5PgesWUsFlrUXBRNo2PmSkMv9UgSA1RTQ/wOT5o_SlwQQ.jpg?size=285x320&quality=95&sign=40d63d0fad24dccd508d0c1fe72dd98c&type=album',
+  ];
+  const welcomeTwoCatalogItemsNames: string[] = [
+    'RINGS',
+    'EARRINGS',
+    'CHAINS',
+    'NECKLACE',
+    'PENDANTS',
+    'BROOCHES',
+    'BRACELETS',
   ];
   const welcomeFourCatalogItems: string[] = [
     'https://sun9-55.userapi.com/impg/EoafY_-OF4uBjvVwCNL3lPHy3PQ17EUp-MG9Dw/MPWKU41btac.jpg?size=387x400&quality=95&sign=695c6fe253519e2109f66875d704b788&type=album',
@@ -47,10 +60,10 @@ function Welcome() {
     '€30,11 EUR',
   ];
   const welcomeSixItems: string[] = [
-    'https://sun9-79.userapi.com/impg/a4PW_iLBhZwEAIb9kEzKfz-1CIqsmQjNCsq-sQ/7Ze8bOsZUJw.jpg?size=49x48&quality=95&sign=ba9271085800264a4312d8acc64be6a4&type=album',
-    'https://sun9-6.userapi.com/impg/kugkWqHrFR7A-6HbJSfbo8_XihlfYJosRkyTRg/u_xHrdejUa8.jpg?size=48x48&quality=95&sign=af07f7034e880ac5f3041ae6063b78dd&type=album',
-    'https://sun9-52.userapi.com/impg/zLk4emPJV80OewXkdIrmrggLxYWdSH2SmFqsjw/PRiSuqQHDzk.jpg?size=49x48&quality=95&sign=74f23af081db3b488a6f39f3af744fba&type=album',
-    'https://sun9-28.userapi.com/impg/AxEAdk1DmcwEcGa9c0GC9RYVjJVatV5V_BG_Bg/siRwoz1LUus.jpg?size=42x48&quality=95&sign=3204322c39e10160fc60d2d57dadd3f6&type=album',
+    deliveryLogo,
+    paymentLogo,
+    guaranteeLogo,
+    supportLogo,
   ];
   const welcomeSixItemsTitles: string[] = [
     'Secure online payment',
@@ -106,7 +119,14 @@ function Welcome() {
           </h3>
           <div className="welcome__two-catalog flex flex-row items-center justify-start gap-5 h-full relative">
             {welcomeTwoCatalogItems.map((item, index) => {
-              return <CatalogItem product={item} index={index} key={item} />;
+              return (
+                <CatalogItem
+                  product={item}
+                  index={index}
+                  key={item}
+                  name={welcomeTwoCatalogItemsNames[index]}
+                />
+              );
             })}
           </div>
         </div>
@@ -174,7 +194,7 @@ function Welcome() {
           </div>
         </div>
       </section>
-      <section className="welcome__six mt-[196px] flex flex-row justify-between w-cont">
+      <section className="welcome__six mt-[122px] flex flex-row justify-between w-cont">
         {welcomeSixItems.map((item, index) => {
           return (
             <WelcomeAdvantages
