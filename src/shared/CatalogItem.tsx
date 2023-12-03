@@ -1,6 +1,6 @@
 import React from 'react';
-import like from 'assets/like.png';
-import dislike from 'assets/dislike.png';
+import like from 'assets/like.svg';
+import dislike from 'assets/dislike.svg';
 
 function CatalogItem(data: {
   product: string;

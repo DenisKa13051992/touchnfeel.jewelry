@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentsIco from 'assets/comments-ico.png';
+import CommentsIco from 'assets/comments-ico.svg';
 
 function FashionCart(data: {
   product: string;
