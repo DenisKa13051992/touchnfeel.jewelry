@@ -9,19 +9,16 @@ function CatalogItem(data: {
   price?: string;
 }) {
   const { product, index, description, price } = data;
-  const productName = product.split('-')[2].slice(0, -4);
   const itemSize = product.includes('two') ? '285px' : '387px';
   return (
-    <div
-      className={`border-solid flex flex-row items-end welcome__two-catalog-item-${productName} flex flex-col justify-between items-start h-full`}
-    >
+    <div className="border-solid welcome__two-catalog-item flex flex-col justify-between items-start h-full">
       <h4 className="welcome__two-catalog-number text-basicMedium text-black w-full">{`0${
         index + 1
       }`}</h4>
       <div className="welcome__two-catalog-img-container relative">
         <img
           src={product}
-          alt={`catalog-${productName}`}
+          alt="catalog-"
           className={`welcome__two-catalog-img min-w-[${itemSize}] max-w-none border-solid border border-transparent rounded`}
         />
         {itemSize === '387px' && index !== 1 && (

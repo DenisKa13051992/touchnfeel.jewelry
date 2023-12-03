@@ -20,10 +20,6 @@ module.exports = {
         '720': '720px',
         '1600': '1600px'
       },
-      backgroundImage: {
-        'bgWoman': "url('assets/bg-woman.png')",
-        'footer-texture': "url('/img/footer-texture.png')",
-      },
       backgroundColor: {
         'black': '#303030',
         'brown': '#CBAC86',
