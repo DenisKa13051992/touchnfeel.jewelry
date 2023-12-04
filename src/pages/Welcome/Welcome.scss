@@ -7,7 +7,13 @@
     height: 244px;
   }
 }
+.welcome__six-divider {
+  background: linear-gradient(to top, rgba(203,172,134, 0) 0%, rgba(203,172,134, .5) 12.5%, rgba(203,172,134, 1) 50%, rgba(203,172,134, .5) 87.5%, rgba(203,172,134, 0) 100%);
+}
 .welcome__seven {
   background-image: url("https://sun9-50.userapi.com/impg/TSKMbcAdf7ZFUYDPAIgQg93rEytFZT4HawrSRw/rZsoYUWoscM.jpg?size=1600x680&quality=95&sign=1265bede4f7609eaaf8386f36dba4213&type=album");
   background-size: cover;
+}
+.welcome__eight-content-cart {
+  box-shadow: 0 8px 24px rgba(129, 135, 189, .15);
 }

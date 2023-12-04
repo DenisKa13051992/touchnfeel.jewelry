@@ -24,6 +24,9 @@ module.exports = {
         'black': '#303030',
         'brown': '#CBAC86',
       },
+      background: {
+        'divider': 'linear-gradient(to top, rgba(203,172,134, 0) 0%, rgba(203,172,134, .5) 12.5%, rgba(203,172,134, 1) 50%, rgba(203,172,134, .5) 87.5%, rgba(203,172,134, 0) 100%)'
+      },
       borderColor: {
         'border': '#D7DADD',
       },

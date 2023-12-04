@@ -194,15 +194,21 @@ function Welcome() {
           </div>
         </div>
       </section>
-      <section className="welcome__six mt-[122px] flex flex-row justify-between w-cont">
+      <section className="welcome__six mt-[122px] h-[132px] flex flex-row justify-between w-cont">
         {welcomeSixItems.map((item, index) => {
           return (
-            <WelcomeAdvantages
-              product={item}
-              description={welcomeSixItemsDescriptions[index]}
-              title={welcomeSixItemsTitles[index]}
-              key={item}
-            />
+            <>
+              <WelcomeAdvantages
+                product={item}
+                description={welcomeSixItemsDescriptions[index]}
+                title={welcomeSixItemsTitles[index]}
+                key={item}
+                index={index}
+              />
+              {index !== 3 && (
+                <div className="welcome__six-divider w-[1px] h-full bg-divider" />
+              )}
+            </>
           );
         })}
       </section>
