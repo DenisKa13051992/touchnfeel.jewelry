@@ -1,13 +1,13 @@
 import React from 'react';
 import './Welcome.scss';
 import Button from 'src/shared/Button';
-import CatalogItem from 'src/shared/CatalogItem';
 import WelcomeAdvantages from 'src/shared/WelcomeAdvantages';
 import FashionCart from 'src/shared/FashionCart';
 import paymentLogo from 'assets/payment-logo.svg';
 import deliveryLogo from 'assets/delivery-logo.svg';
 import guaranteeLogo from 'assets/guarantee-logo.svg';
 import supportLogo from 'assets/support-logo.svg';
+import WelcomeSlider from 'src/features/WelcomeSlider';
 
 // function checkAPI() {
 //   fetch('http://localhost:3000/profile')
@@ -17,48 +17,6 @@ import supportLogo from 'assets/support-logo.svg';
 
 function Welcome() {
   // checkAPI();
-  const welcomeTwoCatalogItems: string[] = [
-    'https://sun9-60.userapi.com/impg/digxtgTiM4Ka3OA5L4Q71oBQ36tcjNl_p84XRw/d8O4vSwACY8.jpg?size=285x320&quality=95&sign=6a8b6a5c1ba55cea4f7d693e0d20f5a6&type=album',
-    'https://sun9-32.userapi.com/impg/g_m3q895b4zpvXstMXYUrLf7bmlegE-TmLfCfw/CqqPKagxH0I.jpg?size=285x320&quality=95&sign=c0d50a76994df3fa11861699d9b23af2&type=album',
-    'https://sun9-4.userapi.com/impg/FhKLUtKTgviRgLtDjtGm1U2RbapPs9Po8l1W0Q/YVKKk-v9j1I.jpg?size=285x320&quality=95&sign=3378d1c8f6d1a98323e130ece4940bf9&type=album',
-    'https://sun9-72.userapi.com/impg/_TYU8PZBYkj8fKsgV9Zh619BnYVtnPDL_ArfkA/ESjrsByQ_ls.jpg?size=285x320&quality=95&sign=dd33108d7a008f89ec62cda21a0808c7&type=album',
-    'https://sun9-55.userapi.com/impg/FNCrrruZfFQYE5JzVHYjLzrjcYNFkKdulZDW3Q/d5iVvGIpCsQ.jpg?size=285x320&quality=95&sign=3a9a781f577e66b7cc908b891fbc0b8c&type=album',
-    'https://sun9-20.userapi.com/impg/ePiEEKC8AZRrEpXS0RKloKY34AxDkzfYhQyIqg/uJ-GkFwA9Yg.jpg?size=285x320&quality=95&sign=b3b54aea0d941743cc68d313cb6f6cdf&type=album',
-    'https://sun9-28.userapi.com/impg/JlvvB5PgesWUsFlrUXBRNo2PmSkMv9UgSA1RTQ/wOT5o_SlwQQ.jpg?size=285x320&quality=95&sign=40d63d0fad24dccd508d0c1fe72dd98c&type=album',
-  ];
-  const welcomeTwoCatalogItemsNames: string[] = [
-    'RINGS',
-    'EARRINGS',
-    'CHAINS',
-    'NECKLACE',
-    'PENDANTS',
-    'BROOCHES',
-    'BRACELETS',
-  ];
-  const welcomeFourCatalogItems: string[] = [
-    'https://sun9-55.userapi.com/impg/EoafY_-OF4uBjvVwCNL3lPHy3PQ17EUp-MG9Dw/MPWKU41btac.jpg?size=387x400&quality=95&sign=695c6fe253519e2109f66875d704b788&type=album',
-    'https://sun54-2.userapi.com/impg/MJ3q3kOi_DxEUqPSyaJQ2JN8Eggc3J5Vk3UBiQ/IoxeNNRGnUw.jpg?size=387x400&quality=95&sign=8b87a4736ca3e398cb4ce88642d578e2&type=album',
-    'https://sun9-80.userapi.com/impg/DUBOXtq7ItUig5yPCySO5ftrmYXtUKBsbbR_UQ/J2sXsi1QWSw.jpg?size=387x400&quality=95&sign=695b5f11c7b49cf49bf945c46d6b99aa&type=album',
-    'https://sun9-46.userapi.com/impg/yVtlKK3ejlGWxNVxZpL-upEc0mNQr23THbyIHQ/2z1qOp5tntg.jpg?size=387x400&quality=95&sign=57b1a0b3c19a113e627cc7639030b0e7&type=album',
-    'https://sun9-70.userapi.com/impg/r1vYKQgK7A4lIKDTkBd8_7hN7K3eRO_dRFO6lA/4K1ztYP3StY.jpg?size=387x400&quality=95&sign=feb50565d71d0310817ffe6c134fdeb4&type=album',
-    'https://sun9-12.userapi.com/impg/Q0ayouEZqqlrH-y5MSWMdpGMSqt_t5gUVa86Fw/ZGLlj9F0zoQ.jpg?size=387x400&quality=95&sign=540408f779edfb4d1ff85f7f368d8bde&type=album',
-  ];
-  const welcomeFourCatalogItemsDescription: string[] = [
-    'Gold earrings "Moonlight"',
-    'Golden necklace "Love symbol"',
-    'Golden ring "Ray of light"',
-    'Gold earrings "Pearl Bay"',
-    'Set of rings "Day and night"',
-    'Gold Chain "Sophistication"',
-  ];
-  const welcomeFourCatalogItemsPrice: string[] = [
-    '€43,53 EUR',
-    '€56,75 EUR',
-    '€29,34 EUR',
-    '€65,15 EUR',
-    '€50,25 EUR',
-    '€30,11 EUR',
-  ];
   const welcomeSixItems: string[] = [
     deliveryLogo,
     paymentLogo,
@@ -112,22 +70,13 @@ function Welcome() {
           </div>
         </div>
       </section>
-      <section className="welcome__two overflow-hidden w-full flex flex-row justify-center">
-        <div className="welcome__two-container w-cont h-[352px] flex flex-row justify-start mt-[180px] gap-1">
+      <section className="welcome__two w-full flex flex-row justify-center">
+        <div className="welcome__two-container w-cont h-[352px] flex flex-row justify-start mt-[180px] relative">
           <h3 className="welcome__two-title text-h3 min-w-[285px] flex items-center pr-4">
             DISCOVER <br /> THE WORLD <br /> OF JEWELRY
           </h3>
-          <div className="welcome__two-catalog flex flex-row items-center justify-start gap-5 h-full relative">
-            {welcomeTwoCatalogItems.map((item, index) => {
-              return (
-                <CatalogItem
-                  product={item}
-                  index={index}
-                  key={item}
-                  name={welcomeTwoCatalogItemsNames[index]}
-                />
-              );
-            })}
+          <div className="welcome__two-catalog h-full absolute left-[285px] w-[1115px]">
+            <WelcomeSlider section="two" />
           </div>
         </div>
       </section>
@@ -152,22 +101,12 @@ function Welcome() {
         </div>
       </section>
       <section className="welcome__four overflow-hidden w-full flex flex-row justify-center">
-        <div className="welcome__four-container w-full flex flex-col justify-center items-center mt-[180px]">
+        <div className="welcome__four-container w-full flex flex-col justify-center items-center mt-[180px] mb-[516px] relative">
           <h2 className="welcome__four-title text-h2 flex items-center mb-16">
             MOST LOVED DESIGNS
           </h2>
-          <div className="welcome__two-catalog h-[516px] w-cont flex flex-row items-center justify-start gap-5 relative">
-            {welcomeFourCatalogItems.map((item, index) => {
-              return (
-                <CatalogItem
-                  product={item}
-                  index={index}
-                  description={welcomeFourCatalogItemsDescription[index]}
-                  price={welcomeFourCatalogItemsPrice[index]}
-                  key={item}
-                />
-              );
-            })}
+          <div className="welcome__two-catalog h-[516px] w-[1400px] absolute top-28 left-[200px]">
+            <WelcomeSlider section="four" />
           </div>
         </div>
       </section>
@@ -197,7 +136,7 @@ function Welcome() {
       <section className="welcome__six mt-[122px] h-[132px] flex flex-row justify-between w-cont">
         {welcomeSixItems.map((item, index) => {
           return (
-            <>
+            <div key={item}>
               <WelcomeAdvantages
                 product={item}
                 description={welcomeSixItemsDescriptions[index]}
@@ -206,9 +145,12 @@ function Welcome() {
                 index={index}
               />
               {index !== 3 && (
-                <div className="welcome__six-divider w-[1px] h-full bg-divider" />
+                <div
+                  className="welcome__six-divider w-[1px] h-full bg-divider"
+                  key={`${item}divider`}
+                />
               )}
-            </>
+            </div>
           );
         })}
       </section>

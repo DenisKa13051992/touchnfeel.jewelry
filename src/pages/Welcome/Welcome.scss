@@ -17,3 +17,9 @@
 .welcome__eight-content-cart {
   box-shadow: 0 8px 24px rgba(129, 135, 189, .15);
 }
+.welcome__two-catalog {
+  min-width: 0;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
