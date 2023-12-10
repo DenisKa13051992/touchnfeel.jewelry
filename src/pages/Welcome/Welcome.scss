@@ -23,3 +23,53 @@
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+.swiper-slide-two {
+  width: 285px !important;
+}
+.swiper-slide-four {
+  width: 407px !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .welcome__six-divider {
+    display: none;
+  }
+  .welcome__six {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    height: auto;
+}
+}
+
+@media screen and (max-width: 1300px) {
+  .welcome__eight-info {
+    height: 200px;
+}
+}
+
+@media screen and (max-width: 1150px) {
+  .welcome__eight-info {
+    height: auto;
+}
+  .welcome__eight-info-title {
+    font-size: 16px;
+  }
+  .welcome__eight-links {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 963px) {
+  .welcome__eight-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+}
+.welcome__eight-info-title {
+  font-size: 20px;
+}
+.welcome__eight-links {
+  font-size: 14px;
+}
+}

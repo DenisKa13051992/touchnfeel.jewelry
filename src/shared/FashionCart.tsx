@@ -12,21 +12,25 @@ function FashionCart(data: {
   const { product, description, title, category, date, comments } = data;
   const commentsNumber = comments || 'No';
   return (
-    <div className="welcome__eight-content-cart min-h-[471px] flex flex-col items-center border-solid border-0 rounded">
-      <img src={product} alt="" className="border-solid border-0 rounded-t" />
-      <div className="welcome__eight-info w-[542px] h-[125px] flex flex-col mt-6">
+    <div className="welcome__eight-content-cart h-full flex flex-col items-center border-solid border-0 rounded">
+      <img
+        src={product}
+        alt=""
+        className="border-solid border-0 rounded-t w-full"
+      />
+      <div className="welcome__eight-info w-full h-[149px] flex flex-col p-6 mb-4 overflow-hidden">
         <h4 className="welcome__eight-info-title text-h4">{title}</h4>
-        <div className="welcome__eight-links flex flex-row justify-start items-center gap-[14px] w-full mt-3 mb-4">
-          <p className="welcome__eight-links-category text-small">{category}</p>
+        <div className="welcome__eight-links flex flex-row text-small justify-between items-center w-full mt-3 mb-4">
+          <p className="welcome__eight-links-category">{category}</p>
           <div className="welcome__eight-links-category-stick h-5 w-[1px] bg-black" />
-          <p className="welcome__eight-links-date text-small">{date}</p>
+          <p className="welcome__eight-links-date">{date}</p>
           <div className="welcome__eight-links-category-stick h-5 w-[1px] bg-black" />
-          <p className="welcome__eight-links-comments text-small flex flex-row items-center gap-2">
+          <p className="welcome__eight-links-comments flex flex-row items-center gap-2">
             <img src={CommentsIco} alt="" />
             {commentsNumber} comments
           </p>
         </div>
-        <h5 className="welcome__eight-info-description text-h5 overflow-hidden">
+        <h5 className="welcome__eight-info-description text-h5">
           {description}
         </h5>
       </div>

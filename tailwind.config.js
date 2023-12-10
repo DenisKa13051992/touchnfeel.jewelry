@@ -13,7 +13,7 @@ module.exports = {
         'brown': '#CBAC86',
       },
       width: {
-        'cont': '1200px',
+        'cont': '75vw',
         'bgr': '1600px',
       },
       height: {

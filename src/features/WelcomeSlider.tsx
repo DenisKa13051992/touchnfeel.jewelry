@@ -56,10 +56,7 @@ function WelcomeSlider(data: { section: string }) {
   const swiperElRef = useRef(null);
   const [perView, setPerView] = useState(0);
   const { section } = data;
-  const slidesNumber =
-    section === 'two'
-      ? ((window.innerWidth - 1200) / 2 + 1200 - 285) / 305
-      : ((window.innerWidth - 1200) / 2 + 1200) / 407;
+  const slidesNumber = section === 'two' ? 6 : 5;
   // useEffect(() => {
   //   // listen for Swiper events using addEventListener
   //   if (swiperElRef.current)
@@ -82,9 +79,9 @@ function WelcomeSlider(data: { section: string }) {
     <Swiper
       ref={swiperElRef}
       slidesPerView={slidesNumber}
-      speed={3000}
+      speed={1500}
       autoplay={{
-        delay: 0,
+        delay: 2000,
         disableOnInteraction: false,
       }}
       spaceBetween={20}
@@ -96,7 +93,7 @@ function WelcomeSlider(data: { section: string }) {
       {section === 'two' &&
         welcomeTwoCatalogItems.map((item, index) => {
           return (
-            <SwiperSlide key={`${item}swip`} className="swiper-slide">
+            <SwiperSlide key={`${item}swip`} className="swiper-slide-two">
               <CatalogItem
                 product={item}
                 index={index}
@@ -109,7 +106,7 @@ function WelcomeSlider(data: { section: string }) {
       {section === 'four' &&
         welcomeFourCatalogItems.map((item, index) => {
           return (
-            <SwiperSlide key={`${item}swip`} className="swiper-slide">
+            <SwiperSlide key={`${item}swip`} className="swiper-slide-four">
               <CatalogItem
                 product={item}
                 index={index}

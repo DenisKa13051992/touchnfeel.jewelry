@@ -70,18 +70,18 @@ function Welcome() {
           </div>
         </div>
       </section>
-      <section className="welcome__two w-full flex flex-row justify-center">
+      <section className="welcome__two w-full flex flex-row justify-center overflow-hidden">
         <div className="welcome__two-container w-cont h-[352px] flex flex-row justify-start mt-[180px] relative">
           <h3 className="welcome__two-title text-h3 min-w-[285px] flex items-center pr-4">
             DISCOVER <br /> THE WORLD <br /> OF JEWELRY
           </h3>
-          <div className="welcome__two-catalog h-full absolute left-[285px] w-[1115px]">
+          <div className="welcome__two-catalog h-full absolute left-[285px] w-[1830px]">
             <WelcomeSlider section="two" />
           </div>
         </div>
       </section>
-      <section className="welcome__three w-full flex flex-row justify-center items-center mt-[180px]">
-        <div className="welcome__three-container w-[502px] h-[244px] flex flex-col justify-between gap-1 items-start">
+      <section className="welcome__three w-cont flex flex-row justify-between items-center mt-[180px]">
+        <div className="welcome__three-container w-[31.375vw] h-[244px] flex flex-col justify-between gap-1 items-start">
           <h3 className="welcome__three-title text-h3 min-w-[285px] flex items-center pr-4">
             ENGAGEMENT RINGS
           </h3>
@@ -105,19 +105,19 @@ function Welcome() {
           <h2 className="welcome__four-title text-h2 flex items-center mb-16">
             MOST LOVED DESIGNS
           </h2>
-          <div className="welcome__two-catalog h-[516px] w-[1400px] absolute top-28 left-[200px]">
+          <div className="welcome__two-catalog h-[516px] w-[2035px] absolute top-28 left-[200px]">
             <WelcomeSlider section="four" />
           </div>
         </div>
       </section>
       <section className="welcome__five w-full h-[624px] relative flex flex-row justify-center items-center mt-[180px]">
-        <div className="welcome__five-background w-[1197px] h-[624px] absolute bg-brown/20 left-0 z-[-1]" />
+        <div className="welcome__five-background w-[74.8vw] h-[624px] absolute bg-brown/20 left-0 -z-50" />
         <div className="welcome__five-container w-cont h-[472px] flex flex-row items-center justify-between">
-          <div className="welcome__five-content w-[488px] h-[268px] flex flex-col">
-            <h3 className="welcome__three-title text-h3 flex text-left pr-4">
+          <div className="welcome__five-content w-[30.5vw] h-[268px] flex flex-col">
+            <h3 className="welcome__five-title text-h3 flex text-left pr-4">
               OUR STORY
             </h3>
-            <h5 className="welcome__three-description text-h5 min-w-[285px] flex items-center pr-4 mb-10 mt-4">
+            <h5 className="welcome__five-description text-h5 min-w-[285px] flex items-center pr-4 mb-10 mt-4">
               At MONUSHÉ, we redefine jewelry by creating high-quality,
               limited-edition pieces without unnecessary markups. <br /> Our
               commitment to affordability ensure you can enjoy effortlessly
@@ -136,7 +136,7 @@ function Welcome() {
       <section className="welcome__six mt-[122px] h-[132px] flex flex-row justify-between w-cont">
         {welcomeSixItems.map((item, index) => {
           return (
-            <div key={item}>
+            <React.Fragment key={`${item}advantage`}>
               <WelcomeAdvantages
                 product={item}
                 description={welcomeSixItemsDescriptions[index]}
@@ -146,11 +146,11 @@ function Welcome() {
               />
               {index !== 3 && (
                 <div
-                  className="welcome__six-divider w-[1px] h-full bg-divider"
+                  className="welcome__six-divider w-[1px] h-[132px] bg-divider"
                   key={`${item}divider`}
                 />
               )}
-            </div>
+            </React.Fragment>
           );
         })}
       </section>
@@ -165,12 +165,12 @@ function Welcome() {
           </div>
         </div>
       </section>
-      <section className="welcome__eight mt-[180px] h-[677px] w-cont flex flex-col justify-between">
-        <h2 className="welcome__eight-title text-h2 text-center">
+      <section className="welcome__eight mt-[180px] min-h-[677px] w-cont flex flex-col justify-between">
+        <h2 className="welcome__eight-title text-h2 text-center mb-16">
           FASHION BLOG
         </h2>
         <div className="welcome__eight-container min-h-[563px] w-full flex flex-col justify-between items-center">
-          <div className="welcome__eight-content grid grid-cols-2 gap-5">
+          <div className="welcome__eight-content grid grid-cols-2 gap-[1.25vw] w-full min-h-[471px] mb-10">
             {welcomeEightItems.map((item, index) => {
               return (
                 <FashionCart

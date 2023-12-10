@@ -61,7 +61,7 @@ function Header() {
                 name="search"
                 id="search"
                 placeholder="Search"
-                className="w-full h-full pl-3"
+                className="w-full h-full pl-3 pr-8"
               />
             </label>
           </div>
