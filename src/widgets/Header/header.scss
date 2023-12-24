@@ -2,7 +2,7 @@
 .header__panel-content {
   height: 84px;
   display: grid;
-  grid-template-columns: 160px 80px 290px 154px 380px 28px 108px;
+  grid-template-columns: 10vw 5vw 18.125vw 9.625vw 23.75vw 1.75vw 6.75vw;
   grid-template-areas: 'logo space-one navigation space-two search space-three user';
   justify-content: center;
   align-items: center;
@@ -35,4 +35,23 @@
     grid-area: user;
   }
 
+}
+
+@media screen and (max-width: 1300px) {
+  .header__panel-content {
+    grid-template-columns: 10vw 5vw 21.125vw 9.625vw 20.75vw 1.75vw 6.75vw;
+}
+}
+
+@media screen and (max-width: 1150px) {
+  .header__panel-content {
+    grid-template-columns: 10vw 4vw 24.125vw 6.625vw 20.75vw 1.75vw 7.75vw;
+}
+}
+
+@media screen and (max-width: 938px) {
+  .header__panel-content {
+    grid-template-columns: 160px 1vw 240px 1vw 200px 1vw 70px;
+    grid-template-areas: 'logo space-one navigation space-two search space-three user';
+}
 }
