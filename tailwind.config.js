@@ -11,6 +11,7 @@ module.exports = {
         'black': '#303030',
         'border': '#D7DADD',
         'brown': '#CBAC86',
+        'contacts': '#7B7B7B',
       },
       width: {
         'cont': '75vw',
@@ -18,7 +19,7 @@ module.exports = {
       },
       height: {
         '720': '720px',
-        '1600': '1600px'
+        '1600': '1600px',
       },
       backgroundColor: {
         'black': '#303030',

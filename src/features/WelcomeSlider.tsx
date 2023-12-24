@@ -93,7 +93,10 @@ function WelcomeSlider(data: { section: string }) {
       {section === 'two' &&
         welcomeTwoCatalogItems.map((item, index) => {
           return (
-            <SwiperSlide key={`${item}swip`} className="swiper-slide-two">
+            <SwiperSlide
+              key={`${item}swip`}
+              className="swiper-slide-two ml-[1.8px]"
+            >
               <CatalogItem
                 product={item}
                 index={index}

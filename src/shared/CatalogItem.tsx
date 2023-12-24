@@ -13,7 +13,7 @@ function CatalogItem(data: {
   const itemSize = !price ? '285px' : '387px';
   return (
     <div className="border-solid welcome__two-catalog-item flex flex-col justify-between items-start h-full max-w-[305px]">
-      <h4 className="welcome__two-catalog-number text-basicMedium text-black pl-1">{`0${
+      <h4 className="welcome__two-catalog-number text-basicMedium text-black">{`0${
         index + 1
       }`}</h4>
       <div className="welcome__two-catalog-img-container relative">

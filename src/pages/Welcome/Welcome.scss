@@ -50,22 +50,16 @@
 }
 
 @media screen and (max-width: 1150px) {
-  .welcome__eight-info {
-    height: auto;
-}
-  .welcome__eight-info-title {
-    font-size: 16px;
-  }
-  .welcome__eight-links {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 963px) {
   .welcome__eight-content {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr;
 }
+  .welcome__eight-info {
+    height: auto;
+}
+}
+
+@media screen and (max-width: 963px) {
 .welcome__eight-info-title {
   font-size: 20px;
 }

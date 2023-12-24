@@ -53,6 +53,12 @@ function Welcome() {
     'August 11, 2023',
   ];
   const welcomeEightItemsComments: number[] = [0, 2];
+  const welcomeNineItems: string[] = [
+    'https://sun9-2.userapi.com/impf/7SY6DJYyg3V2XqMlGXFX5ndTcvOfsZdHuFFciQ/HxRCcaBRF3E.jpg?size=285x285&quality=95&sign=6b06f87ef8cedc9f17f3252528c944ee&type=album',
+    'https://sun9-61.userapi.com/impf/Os2V5gqnJu-fyCqTZXpmyKzOU2XMCr_8ZXJd0g/X-sszhdX20U.jpg?size=285x285&quality=95&sign=ba6f75234e3a765ea6d71f468992b0bd&type=album',
+    'https://sun9-76.userapi.com/impf/zE8r2OvYCC4OMekUnrmSLG3BUbe8zdmfZr5rVg/w0c1ZjAqPTE.jpg?size=285x285&quality=95&sign=f637e4f73f699d21d2107ba83d3cf1cf&type=album',
+    'https://sun9-1.userapi.com/impf/NHBdPE1kIz11hEkKvLWBjp7ed6s5hNFSWftqdw/oWJJ1N-vSfE.jpg?size=285x285&quality=95&sign=2711da46bc81fb829b6c75ac7f302a20&type=album',
+  ];
   return (
     <main className="welcome flex flex-col items-center">
       <section className="welcome__one w-full h-720 flex flex-row justify-center">
@@ -75,7 +81,7 @@ function Welcome() {
           <h3 className="welcome__two-title text-h3 min-w-[285px] flex items-center pr-4">
             DISCOVER <br /> THE WORLD <br /> OF JEWELRY
           </h3>
-          <div className="welcome__two-catalog h-full absolute left-[285px] w-[1830px]">
+          <div className="welcome__two-catalog h-full absolute left-[285px] w-[1840.8px]">
             <WelcomeSlider section="two" />
           </div>
         </div>
@@ -186,6 +192,29 @@ function Welcome() {
             })}
           </div>
           <Button name="Read our blog" color="brown" />
+        </div>
+      </section>
+      <section className="welcome__nine mt-[180px] min-h-[437px] w-cont flex flex-col justify-between">
+        <h2 className="welcome__nine-title text-h2 text-center mb-16">
+          INSTAGRAM
+        </h2>
+        <h5 className="welcome__five-description text-h5 w-full text-center pr-4 mb-4">
+          Share your photos with us using
+          <span className="font-semibold"> #monushe </span> and tag us
+          <span className="font-semibold"> @monushe_jewelry</span>
+          &nbsp;for your chance to be featured!
+        </h5>
+        <div className="welcome__nine-content grid grid-cols-4 gap-[1.25vw] w-full min-h-[285px]">
+          {welcomeNineItems.map((item) => {
+            return (
+              <img
+                src={item}
+                key={item}
+                alt="instagram photos"
+                className="welcome__nine-img min-w-[285px] max-w-none border-solid border border-transparent rounded"
+              />
+            );
+          })}
         </div>
       </section>
     </main>
