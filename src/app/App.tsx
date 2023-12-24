@@ -15,23 +15,21 @@ import FavoriteProducts from 'src/pages/FavoriteProducts';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/404" element={<NotFound />} />
-          <Route path="/Shop" element={<Shop />} />
-          <Route path="/Cart" element={<Cart />} />
-          <Route path="/Contacts" element={<Contacts />} />
-          <Route path="/SingleProduct" element={<SingleProduct />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/Favorites" element={<FavoriteProducts />} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/404" element={<NotFound />} />
+        <Route path="/Shop" element={<Shop />} />
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Contacts" element={<Contacts />} />
+        <Route path="/SingleProduct" element={<SingleProduct />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/Favorites" element={<FavoriteProducts />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
