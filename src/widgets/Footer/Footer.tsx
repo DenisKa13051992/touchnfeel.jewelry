@@ -5,7 +5,7 @@ import FooterList from 'src/shared/FooterList';
 
 function Footer() {
   return (
-    <footer className="footer flex flex-row justify-center w-full mt-[180px] min-h-[413px] bg-brown/20">
+    <footer className="footer flex flex-row justify-center w-full mt-[180px] min-h-[413px] bg-brown/20 relative">
       <div className="footer__container flex flex-col justify-between w-cont min-h-full">
         <div className="footer__content flex flex-row w-full justify-between pt-16 pr-16">
           <div className="footer__content-logo h-full flex flex-row justify-start items-start">
@@ -28,7 +28,7 @@ function Footer() {
             />
             <FooterList
               footerLinksList={[
-                'Help',
+                'HELP',
                 'Delivery & Returns',
                 'FAQ',
                 'Care Guide',
@@ -56,6 +56,7 @@ function Footer() {
           , All Rights Reserved.
         </h6>
       </div>
+      <div className="footer__line w-full h-[1px] bg-[#E4E3E3] absolute bottom-6" />
     </footer>
   );
 }

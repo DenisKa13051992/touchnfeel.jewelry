@@ -9,19 +9,12 @@ import guaranteeLogo from 'assets/guarantee-logo.svg';
 import supportLogo from 'assets/support-logo.svg';
 import WelcomeSlider from 'src/features/WelcomeSlider';
 
-// function checkAPI() {
-//   fetch('http://localhost:3000/profile')
-//     .then((response) => response.json())
-//     .then((json) => console.log(json));
-// }
-
 function Welcome() {
-  // checkAPI();
   const welcomeSixItems: string[] = [
-    deliveryLogo,
     paymentLogo,
-    guaranteeLogo,
     supportLogo,
+    guaranteeLogo,
+    deliveryLogo,
   ];
   const welcomeSixItemsTitles: string[] = [
     'Secure online payment',
@@ -44,8 +37,8 @@ function Welcome() {
     'Selecting Jewelry for Special Events',
   ];
   const welcomeEightItemsDescriptions: string[] = [
-    'In the realm of timeless elegance, caring for your jewelry is an art that ensures your precious pieces remain radiant for generations. While jewelry adds a touch of glamour to our lives, a little care can go a long way in preserving their beauty.',
-    'Jewelry possesses a unique ability to elevate any special occasion, transforming an outfit into a statement and a moment into a memory. Choosing the right pieces for those significant events requires a delicate balance of style, sentiment, and sophistication.',
+    'In the realm of\u00A0timeless elegance, caring for your\u00A0jewelry is an\u00A0art that ensures your\u00A0precious pieces remain radiant for\u00A0generations. While jewelry adds a\u00A0touch of\u00A0glamour to\u00A0our\u00A0lives, a\u00A0little care can go a\u00A0long way in\u00A0preserving their\u00A0beauty.',
+    'Jewelry possesses a\u00A0unique ability to\u00A0elevate any\u00A0special occasion, transforming an\u00A0outfit into\u00A0a\u00A0statement and a\u00A0moment into\u00A0a\u00A0memory. Choosing the\u00A0right pieces for\u00A0those significant events requires a\u00A0delicate balance of\u00A0style, sentiment, and sophistication.',
   ];
   const welcomeEightItemsCategory: string[] = ['Lifestyle', 'Fashion'];
   const welcomeEightItemsDate: string[] = [
@@ -55,8 +48,8 @@ function Welcome() {
   const welcomeEightItemsComments: number[] = [0, 2];
   const welcomeNineItems: string[] = [
     'https://sun9-2.userapi.com/impf/7SY6DJYyg3V2XqMlGXFX5ndTcvOfsZdHuFFciQ/HxRCcaBRF3E.jpg?size=285x285&quality=95&sign=6b06f87ef8cedc9f17f3252528c944ee&type=album',
-    'https://sun9-61.userapi.com/impf/Os2V5gqnJu-fyCqTZXpmyKzOU2XMCr_8ZXJd0g/X-sszhdX20U.jpg?size=285x285&quality=95&sign=ba6f75234e3a765ea6d71f468992b0bd&type=album',
     'https://sun9-76.userapi.com/impf/zE8r2OvYCC4OMekUnrmSLG3BUbe8zdmfZr5rVg/w0c1ZjAqPTE.jpg?size=285x285&quality=95&sign=f637e4f73f699d21d2107ba83d3cf1cf&type=album',
+    'https://sun9-61.userapi.com/impf/Os2V5gqnJu-fyCqTZXpmyKzOU2XMCr_8ZXJd0g/X-sszhdX20U.jpg?size=285x285&quality=95&sign=ba6f75234e3a765ea6d71f468992b0bd&type=album',
     'https://sun9-1.userapi.com/impf/NHBdPE1kIz11hEkKvLWBjp7ed6s5hNFSWftqdw/oWJJ1N-vSfE.jpg?size=285x285&quality=95&sign=2711da46bc81fb829b6c75ac7f302a20&type=album',
   ];
   return (
@@ -87,15 +80,16 @@ function Welcome() {
         </div>
       </section>
       <section className="welcome__three w-cont flex flex-row justify-between items-center mt-[180px]">
-        <div className="welcome__three-container w-[31.375vw] h-[244px] flex flex-col justify-between gap-1 items-start">
+        <div className="welcome__three-container w-[31.375vw] h-[244px] flex flex-col items-start">
           <h3 className="welcome__three-title text-h3 min-w-[285px] flex items-center pr-4">
             ENGAGEMENT RINGS
           </h3>
-          <h5 className="welcome__three-description text-h5 min-w-[285px] flex items-center pr-4">
-            Explore a world of unforgettable moments with our collection of
-            engagement rings. Each one is a work of art, crafted <br /> with
-            love and attention to detail. Find the perfect ring that will
-            symbolize your unique love.
+          <h5 className="welcome__three-description text-h5 min-w-[285px] flex items-center pr-4 mb-10 mt-4">
+            Explore a&nbsp;world of&nbsp;unforgettable moments
+            with&nbsp;our&nbsp;collection of&nbsp;engagement rings. Each one is
+            a&nbsp;work of&nbsp;art, crafted with&nbsp;love and&nbsp;attention
+            to&nbsp;detail. Find the&nbsp;perfect ring
+            that&nbsp;will&nbsp;symbolize your&nbsp;unique love.
           </h5>
           <Button name="View collections" color="brown" />
         </div>
@@ -124,10 +118,11 @@ function Welcome() {
               OUR STORY
             </h3>
             <h5 className="welcome__five-description text-h5 min-w-[285px] flex items-center pr-4 mb-10 mt-4">
-              At MONUSHÉ, we redefine jewelry by creating high-quality,
-              limited-edition pieces without unnecessary markups. <br /> Our
-              commitment to affordability ensure you can enjoy effortlessly
-              wearable, long-lasting jewelry for yourself and your loved ones
+              At MONUSHÉ, we redefine jewelry by&nbsp;creating high-quality,
+              limited-edition pieces without&nbsp;unnecessary markups. <br />{' '}
+              Our&nbsp;commitment to&nbsp;affordability ensure you can enjoy
+              effortlessly wearable, long-lasting jewelry for&nbsp;yourself and
+              your&nbsp;loved ones
             </h5>
             <Button name="Explore our journey" color="brown" />
           </div>
@@ -194,15 +189,15 @@ function Welcome() {
           <Button name="Read our blog" color="brown" />
         </div>
       </section>
-      <section className="welcome__nine mt-[180px] min-h-[437px] w-cont flex flex-col justify-between">
-        <h2 className="welcome__nine-title text-h2 text-center mb-16">
+      <section className="welcome__nine mt-[180px] min-h-[405px] w-cont flex flex-col justify-between">
+        <h2 className="welcome__nine-title text-h2 text-center">
           INSTAGRAM
         </h2>
-        <h5 className="welcome__five-description text-h5 w-full text-center pr-4 mb-4">
-          Share your photos with us using
+        <h5 className="welcome__five-description text-h5 w-full text-center pr-4">
+          Share your&nbsp;photos with&nbsp;us using
           <span className="font-semibold"> #monushe </span> and tag us
           <span className="font-semibold"> @monushe_jewelry</span>
-          &nbsp;for your chance to be featured!
+          &nbsp;for your&nbsp;chance to&nbsp;be featured!
         </h5>
         <div className="welcome__nine-content grid grid-cols-4 gap-[1.25vw] w-full min-h-[285px]">
           {welcomeNineItems.map((item) => {
