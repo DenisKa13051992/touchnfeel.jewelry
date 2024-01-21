@@ -8,8 +8,9 @@ import 'swiper/element/css/a11y';
 import 'swiper/element/css/free-mode';
 import 'swiper/element/css/keyboard';
 import { Autoplay } from 'swiper/modules';
+import welcomeProductDownload from './welcomeProductDownload';
 
-const welcomeTwoCatalogItems: string[] = [
+let welcomeTwoCatalogItems: string[] = [
   'https://sun9-60.userapi.com/impg/digxtgTiM4Ka3OA5L4Q71oBQ36tcjNl_p84XRw/d8O4vSwACY8.jpg?size=285x320&quality=95&sign=6a8b6a5c1ba55cea4f7d693e0d20f5a6&type=album',
   'https://sun9-32.userapi.com/impg/g_m3q895b4zpvXstMXYUrLf7bmlegE-TmLfCfw/CqqPKagxH0I.jpg?size=285x320&quality=95&sign=c0d50a76994df3fa11861699d9b23af2&type=album',
   'https://sun9-4.userapi.com/impg/FhKLUtKTgviRgLtDjtGm1U2RbapPs9Po8l1W0Q/YVKKk-v9j1I.jpg?size=285x320&quality=95&sign=3378d1c8f6d1a98323e130ece4940bf9&type=album',
@@ -18,7 +19,7 @@ const welcomeTwoCatalogItems: string[] = [
   'https://sun9-20.userapi.com/impg/ePiEEKC8AZRrEpXS0RKloKY34AxDkzfYhQyIqg/uJ-GkFwA9Yg.jpg?size=285x320&quality=95&sign=b3b54aea0d941743cc68d313cb6f6cdf&type=album',
   'https://sun9-28.userapi.com/impg/JlvvB5PgesWUsFlrUXBRNo2PmSkMv9UgSA1RTQ/wOT5o_SlwQQ.jpg?size=285x320&quality=95&sign=40d63d0fad24dccd508d0c1fe72dd98c&type=album',
 ];
-const welcomeTwoCatalogItemsNames: string[] = [
+let welcomeTwoCatalogItemsNames: string[] = [
   'RINGS',
   'EARRINGS',
   'CHAINS',
@@ -55,6 +56,27 @@ const welcomeFourCatalogItemsPrice: string[] = [
 function WelcomeSlider(data: { section: string }) {
   const swiperElRef = useRef(null);
   const [perView, setPerView] = useState(0);
+  const [welcomeProductData, setWelcomeProductTwoData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const productData = await welcomeProductDownload();
+      setWelcomeProductTwoData(productData);
+    };
+    fetchData();
+  }, []);
+  if (welcomeProductData) {
+    welcomeTwoCatalogItems = Object.values(welcomeProductData.two);
+    welcomeTwoCatalogItemsNames = Object.keys(welcomeProductData.two).map((i) =>
+      i.toUpperCase()
+    );
+  }
+  console.log(
+    welcomeProductData,
+    welcomeTwoCatalogItems,
+    welcomeTwoCatalogItemsNames
+  );
+
   const { section } = data;
   const slidesNumber = section === 'two' ? 6 : 5;
   // useEffect(() => {
