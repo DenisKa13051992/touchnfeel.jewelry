@@ -64,6 +64,10 @@ module.exports = {
           lineHeight: '20px',
           fontWeight: '400',
         }],
+        'header-font': ['12px', {
+          lineHeight: '16px',
+          fontWeight: '500',
+        }]
       },
       fontFamily: {
         'lato': ['lato', 'sans-serif'],
