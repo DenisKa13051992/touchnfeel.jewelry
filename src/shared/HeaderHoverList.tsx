@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function HeaderHoverList(data: { aboutLinks: string[] }) {
   const { aboutLinks } = data;
@@ -7,7 +8,7 @@ function HeaderHoverList(data: { aboutLinks: string[] }) {
       {aboutLinks.map((item) => {
         return (
           <li className="text-header-font font-lato text-black" key={item}>
-            {item}
+            <Link to="About">{item}</Link>
           </li>
         );
       })}

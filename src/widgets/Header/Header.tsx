@@ -47,6 +47,9 @@ function Header() {
                   onMouseEnter={() => {
                     setOpenList('About');
                   }}
+                  onClick={() => {
+                    setOpenList('');
+                  }}
                 >
                   ABOUT
                 </Link>

@@ -80,7 +80,7 @@ function Welcome() {
         </div>
       </section>
       <section className="welcome__three w-cont flex flex-row justify-between items-center mt-[180px]">
-        <div className="welcome__three-container w-[31.375vw] h-[244px] flex flex-col items-start">
+        <div className="welcome__three-content w-[31.375vw] h-[244px] flex flex-col items-start">
           <h3 className="welcome__three-title text-h3 min-w-[285px] flex items-center pr-4">
             ENGAGEMENT RINGS
           </h3>
@@ -190,9 +190,7 @@ function Welcome() {
         </div>
       </section>
       <section className="welcome__nine mt-[180px] min-h-[405px] w-cont flex flex-col justify-between">
-        <h2 className="welcome__nine-title text-h2 text-center">
-          INSTAGRAM
-        </h2>
+        <h2 className="welcome__nine-title text-h2 text-center">INSTAGRAM</h2>
         <h5 className="welcome__five-description text-h5 w-full text-center pr-4">
           Share your&nbsp;photos with&nbsp;us using
           <span className="font-semibold"> #monushe </span> and tag us
