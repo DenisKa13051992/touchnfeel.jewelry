@@ -103,12 +103,12 @@ function About() {
             />
           </div>
         </section>
-        <section className="our-story__five relative h-[497px] w-cont overflow-hidden flex flex-col items-center mt-[180px]">
+        <section className="our-story__five relative h-[488px] w-cont flex flex-col items-center mt-[180px]">
           <h3 className="welcome__two-title text-h3 min-w-[285px] flex items-center">
             DISCOVER OUR DESIGNS
           </h3>
-          <div className="welcome__five-catalog h-[352px] absolute top-[72px] w-[1840.8px]">
-            <WelcomeSlider section="two" />
+          <div className="our-story__five-catalog h-[416px] absolute top-[72px] w-cont">
+            <WelcomeSlider section="two" stopAutoplay="true" />
           </div>
         </section>
       </div>

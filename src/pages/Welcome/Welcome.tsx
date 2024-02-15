@@ -71,7 +71,7 @@ function Welcome() {
       </section>
       <section className="welcome__two w-full flex flex-row justify-center overflow-hidden">
         <div className="welcome__two-container w-cont h-[352px] flex flex-row justify-start mt-[180px] relative">
-          <h3 className="welcome__two-title text-h3 min-w-[285px] flex items-center pr-4">
+          <h3 className="welcome__two-title text-h3 min-w-[283px] flex items-center pr-4">
             DISCOVER <br /> THE WORLD <br /> OF JEWELRY
           </h3>
           <div className="welcome__two-catalog h-full absolute left-[285px] w-[1840.8px]">

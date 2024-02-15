@@ -17,6 +17,9 @@
   top: 100%;
   left: 100%
 }
+.swiper-wrapper {
+  height: 352px;
+}
 //   & .welcome__one-content {
 //     max-width: 517px;
 //     height: 244px;
@@ -40,9 +43,6 @@
 // }
 // .welcome__two-catalog {
 //   min-width: 0;
-// }
-// .swiper-wrapper {
-//   transition-timing-function: linear !important;
 // }
 // .swiper-slide-two {
 //   width: 285px !important;

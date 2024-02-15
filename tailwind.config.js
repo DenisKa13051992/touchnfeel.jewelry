@@ -12,7 +12,8 @@ module.exports = {
         'border': '#D7DADD',
         'brown': '#CBAC86',
         'contacts': '#7B7B7B',
-        'greyAdvent': '#787A80'
+        'greyAdvent': '#787A80',
+        'bgrSwiperArrow': '#E5E5E5',
       },
       width: {
         'cont': '75vw',

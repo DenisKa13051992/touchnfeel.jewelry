@@ -7,7 +7,7 @@ import 'swiper/element/css/autoplay';
 import 'swiper/element/css/a11y';
 import 'swiper/element/css/free-mode';
 import 'swiper/element/css/keyboard';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 const welcomeTwoCatalogItems: string[] = [
   'https://sun9-60.userapi.com/impg/digxtgTiM4Ka3OA5L4Q71oBQ36tcjNl_p84XRw/d8O4vSwACY8.jpg?size=285x320&quality=95&sign=6a8b6a5c1ba55cea4f7d693e0d20f5a6&type=album',
@@ -52,10 +52,10 @@ const welcomeFourCatalogItemsPrice: string[] = [
   '€30,11 EUR',
 ];
 
-function WelcomeSlider(data: { section: string }) {
+function WelcomeSlider(data: { section: string; stopAutoplay?: string }) {
   const swiperElRef = useRef(null);
   const [perView, setPerView] = useState(0);
-  const { section } = data;
+  const { section, stopAutoplay } = data;
   const slidesNumber = section === 'two' ? 6 : 5;
   // useEffect(() => {
   //   // listen for Swiper events using addEventListener
@@ -78,16 +78,20 @@ function WelcomeSlider(data: { section: string }) {
   return (
     <Swiper
       ref={swiperElRef}
-      slidesPerView={slidesNumber}
-      speed={1500}
+      slidesPerView={stopAutoplay ? 4 : slidesNumber}
+      speed={!stopAutoplay ? 1500 : 200}
       autoplay={{
         delay: 2000,
         disableOnInteraction: false,
       }}
+      navigation={{
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      }}
       spaceBetween={20}
       loop
       grabCursor
-      modules={[Autoplay]}
+      modules={!stopAutoplay ? [Autoplay] : [Navigation]}
       className="welcome__two-catalog swiper h-full relative"
     >
       {section === 'two' &&
@@ -106,6 +110,24 @@ function WelcomeSlider(data: { section: string }) {
             </SwiperSlide>
           );
         })}
+      {stopAutoplay && (
+        <div className="swiper-buttons h-[64px] w-full flex flex-row justify-center items-center gap-4 pt-5">
+          <div className="swiper-next w-8 h-8 flex flex-row justify-center items-center rounded-full hover:bg-bgrSwiperArrow">
+            <img
+              src="src/assets/arrow-right.svg"
+              className="rotate-180 w-[18px] h-[11px]"
+              alt="next slide"
+            />
+          </div>
+          <div className="swiper-prev w-8 h-8 flex flex-row justify-center items-center rounded-full hover:bg-bgrSwiperArrow">
+            <img
+              src="src/assets/arrow-right.svg"
+              className="w-[18px] h-[11px]"
+              alt="prev slide"
+            />
+          </div>
+        </div>
+      )}
       {section === 'four' &&
         welcomeFourCatalogItems.map((item, index) => {
           return (
