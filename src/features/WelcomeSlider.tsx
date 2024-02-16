@@ -8,6 +8,7 @@ import 'swiper/element/css/a11y';
 import 'swiper/element/css/free-mode';
 import 'swiper/element/css/keyboard';
 import { Autoplay, Navigation } from 'swiper/modules';
+import SwiperArrow from 'src/assets/arrow-right.svg'
 
 const welcomeTwoCatalogItems: string[] = [
   'https://sun9-60.userapi.com/impg/digxtgTiM4Ka3OA5L4Q71oBQ36tcjNl_p84XRw/d8O4vSwACY8.jpg?size=285x320&quality=95&sign=6a8b6a5c1ba55cea4f7d693e0d20f5a6&type=album',
@@ -114,14 +115,14 @@ function WelcomeSlider(data: { section: string; stopAutoplay?: string }) {
         <div className="swiper-buttons h-[64px] w-full flex flex-row justify-center items-center gap-4 pt-5">
           <div className="swiper-next w-8 h-8 flex flex-row justify-center items-center rounded-full hover:bg-bgrSwiperArrow">
             <img
-              src="src/assets/arrow-right.svg"
+              src={SwiperArrow}
               className="rotate-180 w-[18px] h-[11px]"
               alt="next slide"
             />
           </div>
           <div className="swiper-prev w-8 h-8 flex flex-row justify-center items-center rounded-full hover:bg-bgrSwiperArrow">
             <img
-              src="src/assets/arrow-right.svg"
+              src={SwiperArrow}
               className="w-[18px] h-[11px]"
               alt="prev slide"
             />
