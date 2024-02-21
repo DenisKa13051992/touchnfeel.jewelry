@@ -8,7 +8,7 @@ import 'swiper/element/css/a11y';
 import 'swiper/element/css/free-mode';
 import 'swiper/element/css/keyboard';
 import { Autoplay, Navigation } from 'swiper/modules';
-import SwiperArrow from 'src/assets/arrow-right.svg'
+import SwiperArrow from 'src/assets/arrow-right.svg';
 
 const welcomeTwoCatalogItems: string[] = [
   'https://sun9-60.userapi.com/impg/digxtgTiM4Ka3OA5L4Q71oBQ36tcjNl_p84XRw/d8O4vSwACY8.jpg?size=285x320&quality=95&sign=6a8b6a5c1ba55cea4f7d693e0d20f5a6&type=album',

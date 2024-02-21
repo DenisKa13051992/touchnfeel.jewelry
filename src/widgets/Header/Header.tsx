@@ -43,9 +43,9 @@ function Header() {
                 }}
               >
                 <Link
-                  to="About"
+                  to="OurStory"
                   onMouseEnter={() => {
-                    setOpenList('About');
+                    setOpenList('OurStory');
                   }}
                   onClick={() => {
                     setOpenList('');
@@ -56,10 +56,16 @@ function Header() {
                 {openList && (
                   <HeaderHoverList
                     aboutLinks={[
-                      'OUR STORY',
-                      'FAIR PRICING',
-                      'SUSTAINABILITY',
-                      'CARE GUIDE & WARRANTY',
+                      { link: 'OUR STORY', routeLink: 'OurStory' },
+                      { link: 'FAIR PRICING', routeLink: 'FairPricing' },
+                      {
+                        link: 'SUSTAINABILITY',
+                        routeLink: 'OurStory',
+                      },
+                      {
+                        link: 'CARE GUIDE & WARRANTY',
+                        routeLink: 'OurStory',
+                      },
                     ]}
                   />
                 )}

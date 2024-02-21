@@ -11,9 +11,11 @@ module.exports = {
         'black': '#303030',
         'border': '#D7DADD',
         'brown': '#CBAC86',
+        'bgGray': '#F9F9F9',
         'contacts': '#7B7B7B',
         'greyAdvent': '#787A80',
         'bgrSwiperArrow': '#E5E5E5',
+        'borderGrey': '#E3E3E3',
       },
       width: {
         'cont': '75vw',

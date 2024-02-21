@@ -1,8 +1,8 @@
 import React from 'react';
-import './About.scss';
+import './OurStory.scss';
 import WelcomeSlider from 'src/features/WelcomeSlider';
 
-function About() {
+function OurStory() {
   return (
     <div className="about-wrapper w-full flex flex-col items-center">
       <section className="about__bgr w-full h-[400px] flex flex-row justify-center items-end">
@@ -116,4 +116,4 @@ function About() {
   );
 }
 
-export default About;
+export default OurStory;
