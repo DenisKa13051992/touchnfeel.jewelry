@@ -8,14 +8,14 @@ function Button(data: { name: string; color: string }) {
         type="button"
         className={`w-min whitespace-nowrap px-10 py-3.5 text-white bg-black border-0 rounded text-largeButton button-${name}`}
       >
-        {name}
+        {name.toUpperCase()}
       </button>
     )) || (
       <button
         type="button"
         className={`w-min whitespace-nowrap px-10 py-3.5 text-white bg-brown border-0 rounded text-largeButton button-${name}`}
       >
-        {name}
+        {name.toUpperCase()}
       </button>
     )
   );

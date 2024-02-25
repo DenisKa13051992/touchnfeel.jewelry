@@ -17,6 +17,12 @@
 .welcome__eight-content-cart {
   box-shadow: 0 8px 24px rgba(129, 135, 189, .15);
 }
+.welcome__eight-info-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 .welcome__two-catalog {
   min-width: 0;
 }

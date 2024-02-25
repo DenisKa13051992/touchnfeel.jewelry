@@ -3,62 +3,22 @@ import './Welcome.scss';
 import Button from 'src/shared/Button';
 import WelcomeAdvantages from 'src/shared/WelcomeAdvantages';
 import FashionCart from 'src/shared/FashionCart';
-import paymentLogo from 'assets/payment-logo.svg';
-import deliveryLogo from 'assets/delivery-logo.svg';
-import guaranteeLogo from 'assets/guarantee-logo.svg';
-import supportLogo from 'assets/support-logo.svg';
-import WelcomeSlider from 'src/features/WelcomeSlider';
-
-// function checkAPI() {
-//   fetch('http://localhost:3000/profile')
-//     .then((response) => response.json())
-//     .then((json) => console.log(json));
-// }
+import WelcomeSlider from 'src/features/WelcomeSlider/WelcomeSlider';
+import SocialMediaSection from 'src/shared/SocialMediaSection';
+import {
+  welcomeSixItems,
+  welcomeSixItemsDescriptions,
+  welcomeSixItemsTitles,
+  welcomeEightItems,
+  welcomeEightItemsDescriptions,
+  welcomeEightItemsTitles,
+  welcomeEightItemsCategory,
+  welcomeEightItemsDate,
+  welcomeEightItemsComments,
+  welcomeNineItems,
+} from './WelcomeModel';
 
 function Welcome() {
-  // checkAPI();
-  const welcomeSixItems: string[] = [
-    deliveryLogo,
-    paymentLogo,
-    guaranteeLogo,
-    supportLogo,
-  ];
-  const welcomeSixItemsTitles: string[] = [
-    'Secure online payment',
-    '24/7 Customer support',
-    'Money back guarantee',
-    'Fast worldwide shipping',
-  ];
-  const welcomeSixItemsDescriptions: string[] = [
-    'Accept all major credit cards',
-    'Friendly 24/7 customer support',
-    'We return money within 30 days',
-    'Get free shipping over 50 EUR',
-  ];
-  const welcomeEightItems: string[] = [
-    'https://sun9-77.userapi.com/impg/MYOwGGf_S4dHEH6368yW-PNrmBy0qqRYbITV3g/RAeV64DrzF0.jpg?size=590x306&quality=95&sign=3052ab355937acec24a7707a57f93f69&type=album',
-    'https://sun9-51.userapi.com/impg/_-70PnKmZiM3F-afDp2C2iGXLEn-sYRPalcStQ/I11wlps-I7g.jpg?size=590x306&quality=95&sign=911b2960755bf71073ba0feeaf72dec6&type=album',
-  ];
-  const welcomeEightItemsTitles: string[] = [
-    'Jewelry Care Tips',
-    'Selecting Jewelry for Special Events',
-  ];
-  const welcomeEightItemsDescriptions: string[] = [
-    'In the realm of timeless elegance, caring for your jewelry is an art that ensures your precious pieces remain radiant for generations. While jewelry adds a touch of glamour to our lives, a little care can go a long way in preserving their beauty.',
-    'Jewelry possesses a unique ability to elevate any special occasion, transforming an outfit into a statement and a moment into a memory. Choosing the right pieces for those significant events requires a delicate balance of style, sentiment, and sophistication.',
-  ];
-  const welcomeEightItemsCategory: string[] = ['Lifestyle', 'Fashion'];
-  const welcomeEightItemsDate: string[] = [
-    'September 20, 2023',
-    'August 11, 2023',
-  ];
-  const welcomeEightItemsComments: number[] = [0, 2];
-  const welcomeNineItems: string[] = [
-    'https://sun9-2.userapi.com/impf/7SY6DJYyg3V2XqMlGXFX5ndTcvOfsZdHuFFciQ/HxRCcaBRF3E.jpg?size=285x285&quality=95&sign=6b06f87ef8cedc9f17f3252528c944ee&type=album',
-    'https://sun9-61.userapi.com/impf/Os2V5gqnJu-fyCqTZXpmyKzOU2XMCr_8ZXJd0g/X-sszhdX20U.jpg?size=285x285&quality=95&sign=ba6f75234e3a765ea6d71f468992b0bd&type=album',
-    'https://sun9-76.userapi.com/impf/zE8r2OvYCC4OMekUnrmSLG3BUbe8zdmfZr5rVg/w0c1ZjAqPTE.jpg?size=285x285&quality=95&sign=f637e4f73f699d21d2107ba83d3cf1cf&type=album',
-    'https://sun9-1.userapi.com/impf/NHBdPE1kIz11hEkKvLWBjp7ed6s5hNFSWftqdw/oWJJ1N-vSfE.jpg?size=285x285&quality=95&sign=2711da46bc81fb829b6c75ac7f302a20&type=album',
-  ];
   return (
     <main className="welcome flex flex-col items-center">
       <section className="welcome__one w-full h-720 flex flex-row justify-center">
@@ -78,7 +38,7 @@ function Welcome() {
       </section>
       <section className="welcome__two w-full flex flex-row justify-center overflow-hidden">
         <div className="welcome__two-container w-cont h-[352px] flex flex-row justify-start mt-[180px] relative">
-          <h3 className="welcome__two-title text-h3 min-w-[285px] flex items-center pr-4">
+          <h3 className="welcome__two-title text-h3 min-w-[283px] flex items-center pr-4">
             DISCOVER <br /> THE WORLD <br /> OF JEWELRY
           </h3>
           <div className="welcome__two-catalog h-full absolute left-[285px] w-[1840.8px]">
@@ -87,15 +47,16 @@ function Welcome() {
         </div>
       </section>
       <section className="welcome__three w-cont flex flex-row justify-between items-center mt-[180px]">
-        <div className="welcome__three-container w-[31.375vw] h-[244px] flex flex-col justify-between gap-1 items-start">
+        <div className="welcome__three-content w-[31.375vw] h-[244px] flex flex-col items-start">
           <h3 className="welcome__three-title text-h3 min-w-[285px] flex items-center pr-4">
             ENGAGEMENT RINGS
           </h3>
-          <h5 className="welcome__three-description text-h5 min-w-[285px] flex items-center pr-4">
-            Explore a world of unforgettable moments with our collection of
-            engagement rings. Each one is a work of art, crafted <br /> with
-            love and attention to detail. Find the perfect ring that will
-            symbolize your unique love.
+          <h5 className="welcome__three-description text-h5 min-w-[285px] flex items-center pr-4 mb-10 mt-4">
+            Explore a&nbsp;world of&nbsp;unforgettable moments
+            with&nbsp;our&nbsp;collection of&nbsp;engagement rings. Each one is
+            a&nbsp;work of&nbsp;art, crafted with&nbsp;love and&nbsp;attention
+            to&nbsp;detail. Find the&nbsp;perfect ring
+            that&nbsp;will&nbsp;symbolize your&nbsp;unique love.
           </h5>
           <Button name="View collections" color="brown" />
         </div>
@@ -124,10 +85,11 @@ function Welcome() {
               OUR STORY
             </h3>
             <h5 className="welcome__five-description text-h5 min-w-[285px] flex items-center pr-4 mb-10 mt-4">
-              At MONUSHÉ, we redefine jewelry by creating high-quality,
-              limited-edition pieces without unnecessary markups. <br /> Our
-              commitment to affordability ensure you can enjoy effortlessly
-              wearable, long-lasting jewelry for yourself and your loved ones
+              At MONUSHÉ, we redefine jewelry by&nbsp;creating high-quality,
+              limited-edition pieces without&nbsp;unnecessary markups. <br />{' '}
+              Our&nbsp;commitment to&nbsp;affordability ensure you can enjoy
+              effortlessly wearable, long-lasting jewelry for&nbsp;yourself and
+              your&nbsp;loved ones
             </h5>
             <Button name="Explore our journey" color="brown" />
           </div>
@@ -194,29 +156,7 @@ function Welcome() {
           <Button name="Read our blog" color="brown" />
         </div>
       </section>
-      <section className="welcome__nine mt-[180px] min-h-[437px] w-cont flex flex-col justify-between">
-        <h2 className="welcome__nine-title text-h2 text-center mb-16">
-          INSTAGRAM
-        </h2>
-        <h5 className="welcome__five-description text-h5 w-full text-center pr-4 mb-4">
-          Share your photos with us using
-          <span className="font-semibold"> #monushe </span> and tag us
-          <span className="font-semibold"> @monushe_jewelry</span>
-          &nbsp;for your chance to be featured!
-        </h5>
-        <div className="welcome__nine-content grid grid-cols-4 gap-[1.25vw] w-full min-h-[285px]">
-          {welcomeNineItems.map((item) => {
-            return (
-              <img
-                src={item}
-                key={item}
-                alt="instagram photos"
-                className="welcome__nine-img min-w-[285px] max-w-none border-solid border border-transparent rounded"
-              />
-            );
-          })}
-        </div>
-      </section>
+      <SocialMediaSection pictures={welcomeNineItems} />
     </main>
   );
 }

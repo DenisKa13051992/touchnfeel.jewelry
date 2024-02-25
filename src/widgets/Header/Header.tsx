@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.scss';
 import MoneyChanger from 'assets/line-header.svg';
 import Monushe from 'assets/Monushe.svg';
@@ -7,8 +7,10 @@ import UserLogo from 'assets/user-logo.svg';
 import HeartLogo from 'assets/heart-logo.svg';
 import CartLogo from 'assets/cart-logo.svg';
 import { Link } from 'react-router-dom';
+import HeaderHoverList from 'src/shared/HeaderHoverList';
 
 function Header() {
+  const [openList, setOpenList] = useState('');
   return (
     <header className="header flex flex-col w-full h-32">
       <div className="header__promotion flex flex-row w-full bg-black h-11 justify-center items-center text-xs text-white font-normal">
@@ -34,8 +36,39 @@ function Header() {
           <div className="header__panel-grid-space-one" />
           <nav className="header__panel-navigation flex flex-row h-full justify-center items-center">
             <ul className="header__panel-navigation-list flex flex-row w-full justify-between items-center">
-              <li className="header__panel-navigation-about">
-                <Link to="About">ABOUT</Link>
+              <li
+                className="header__panel-navigation-about relative"
+                onMouseLeave={() => {
+                  setOpenList('');
+                }}
+              >
+                <Link
+                  to="OurStory"
+                  onMouseEnter={() => {
+                    setOpenList('OurStory');
+                  }}
+                  onClick={() => {
+                    setOpenList('');
+                  }}
+                >
+                  ABOUT
+                </Link>
+                {openList && (
+                  <HeaderHoverList
+                    aboutLinks={[
+                      { link: 'OUR STORY', routeLink: 'OurStory' },
+                      { link: 'FAIR PRICING', routeLink: 'FairPricing' },
+                      {
+                        link: 'SUSTAINABILITY',
+                        routeLink: 'OurStory',
+                      },
+                      {
+                        link: 'CARE GUIDE & WARRANTY',
+                        routeLink: 'OurStory',
+                      },
+                    ]}
+                  />
+                )}
               </li>
               <li className="header__panel-navigation-shop">
                 <Link to="Shop">SHOP</Link>
