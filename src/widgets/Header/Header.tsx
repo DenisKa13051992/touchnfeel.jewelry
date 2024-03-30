@@ -60,7 +60,7 @@ function Header() {
                       { link: 'FAIR PRICING', routeLink: 'FairPricing' },
                       {
                         link: 'SUSTAINABILITY',
-                        routeLink: 'OurStory',
+                        routeLink: 'Sustainability',
                       },
                       {
                         link: 'CARE GUIDE & WARRANTY',

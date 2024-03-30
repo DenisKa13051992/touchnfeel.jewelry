@@ -11,6 +11,7 @@ import Contacts from 'pages/Contacts';
 import SingleProduct from 'pages/SingleProduct';
 import OurStory from 'src/pages/About/OurStory';
 import FairPricing from 'src/pages/About/FairPricing';
+import Sustainability from 'src/pages/About/Sustainability';
 import Blog from 'src/pages/Blog';
 import FavoriteProducts from 'src/pages/FavoriteProducts';
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/SingleProduct" element={<SingleProduct />} />
         <Route path="/OurStory" element={<OurStory />} />
         <Route path="/FairPricing" element={<FairPricing />} />
+        <Route path="/Sustainability" element={<Sustainability />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Favorites" element={<FavoriteProducts />} />
       </Routes>
