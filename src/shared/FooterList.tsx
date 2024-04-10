@@ -19,7 +19,7 @@ function FooterList(data: { footerLinksList: string[] }) {
                 className={`footer__${footerTitle.toLowerCase()}-${item.toLowerCase()}`}
                 key={item}
               >
-                <Link to="Shop">
+                <Link to={item.split(' ').join('')}>
                   <h5 className="text-h5">{item}</h5>
                 </Link>
               </li>
