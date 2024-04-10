@@ -64,7 +64,7 @@ function Header() {
                       },
                       {
                         link: 'CARE GUIDE & WARRANTY',
-                        routeLink: 'OurStory',
+                        routeLink: 'CareGuide&Warranty',
                       },
                     ]}
                   />
