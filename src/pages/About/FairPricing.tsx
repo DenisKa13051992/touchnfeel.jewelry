@@ -66,7 +66,7 @@ function FairPricing() {
               </h3>
               <button
                 type="button"
-                className="fair-pricing__three-chevron w-6 h-6 mr-2 flex justify-center items-center"
+                className="fair-pricing__three-chevron w-6 h-6 mr-3 flex justify-center items-center"
               >
                 <img
                   src={chevron}
@@ -104,7 +104,7 @@ function FairPricing() {
               </h3>
               <button
                 type="button"
-                className="fair-pricing__three-chevron w-6 h-6 mr-2 flex justify-center items-center"
+                className="fair-pricing__three-chevron w-6 h-6 mr-3 flex justify-center items-center"
               >
                 <img
                   src={chevron}

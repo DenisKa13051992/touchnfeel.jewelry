@@ -67,7 +67,7 @@ function CareGuide() {
           <div className="care-guide__two-how-should w-full min-h-[80px] flex flex-col items-start border-t-[1px] border-borderGrey border-solid">
             <div
               role="presentation"
-              className="care-guide__two-container w-full pt-5 pb-4 flex justify-between items-center cursor-pointer"
+              className="care-guide__two-container w-full pt-[26px] pb-4 flex justify-between items-center cursor-pointer"
               onClick={() => {
                 return openHowShould
                   ? setOpenHowShould('')
@@ -79,7 +79,7 @@ function CareGuide() {
               </h4>
               <button
                 type="button"
-                className="care-guide__two-chevron w-6 h-6 mr-2 flex justify-center items-center"
+                className="care-guide__two-chevron w-6 h-6 mr-3 flex justify-center items-center"
               >
                 <img
                   src={chevron}
@@ -108,14 +108,14 @@ function CareGuide() {
               onClick={() => {
                 return openHowCan ? setOpenHowCan('') : setOpenHowCan('HowCan');
               }}
-              className="care-guide__two-container w-full pt-5 pb-4 flex items-center cursor-pointer"
+              className="care-guide__two-container w-full pt-[26px] pb-4 flex items-center cursor-pointer"
             >
               <h4 className="care-guide__two-title text-h4 font-medium h-full w-full flex text-left items-center hover:underline">
                 How can I take care of my sterling silver jewellery?
               </h4>
               <button
                 type="button"
-                className="care-guide__two-chevron w-6 h-6 mr-2 flex justify-center items-center"
+                className="care-guide__two-chevron w-6 h-6 mr-3 flex justify-center items-center"
               >
                 <img
                   src={chevron}
@@ -149,14 +149,14 @@ function CareGuide() {
               onClick={() => {
                 return openWhatIs ? setOpenWhatIs('') : setOpenWhatIs('WhatIs');
               }}
-              className="care-guide__two-container w-full pt-5 pb-4 flex items-center cursor-pointer"
+              className="care-guide__two-container w-full pt-[26px] pb-4 flex items-center cursor-pointer"
             >
               <h4 className="care-guide__two-title text-h4 font-medium h-full w-full flex text-left items-center hover:underline">
                 What is gold vermeil?
               </h4>
               <button
                 type="button"
-                className="care-guide__two-chevron w-6 h-6 mr-2 flex justify-center items-center"
+                className="care-guide__two-chevron w-6 h-6 mr-3 flex justify-center items-center"
               >
                 <img
                   src={chevron}
@@ -189,14 +189,14 @@ function CareGuide() {
               onClick={() => {
                 return openHowDo ? setOpenHowDo('') : setOpenHowDo('HowDo');
               }}
-              className="care-guide__two-container w-full pt-5 pb-4 flex items-center cursor-pointer"
+              className="care-guide__two-container w-full pt-[26px] pb-4 flex items-center cursor-pointer"
             >
               <h4 className="care-guide__two-title text-h4 font-medium h-full w-full flex text-left items-center hover:underline">
                 How do I take care of gold vermeil jewellery?
               </h4>
               <button
                 type="button"
-                className="care-guide__two-chevron w-6 h-6 mr-2 flex justify-center items-center"
+                className="care-guide__two-chevron w-6 h-6 mr-3 flex justify-center items-center"
               >
                 <img
                   src={chevron}
@@ -245,14 +245,14 @@ function CareGuide() {
                   ? setOpenWhatAbout('')
                   : setOpenWhatAbout('WhatAbout');
               }}
-              className="care-guide__two-container w-full pt-5 pb-4 flex items-center cursor-pointer"
+              className="care-guide__two-container w-full pt-[26px] pb-4 flex items-center cursor-pointer"
             >
               <h4 className="care-guide__two-title text-h4 font-medium h-full w-full flex text-left items-center hover:underline">
                 And what about pearls?
               </h4>
               <button
                 type="button"
-                className="care-guide__two-chevron w-6 h-6 mr-2 flex justify-center items-center"
+                className="care-guide__two-chevron w-6 h-6 mr-3 flex justify-center items-center"
               >
                 <img
                   src={chevron}
