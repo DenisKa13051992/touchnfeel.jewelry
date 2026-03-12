@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './header.scss';
 import MoneyChanger from 'assets/line-header.svg';
-import Monushe from 'assets/Monushe.svg';
+import Monushe from 'assets/monushe.svg';
 import SearchLogo from 'assets/search-logo.svg';
 import UserLogo from 'assets/user-logo.svg';
 import HeartLogo from 'assets/heart-logo.svg';
