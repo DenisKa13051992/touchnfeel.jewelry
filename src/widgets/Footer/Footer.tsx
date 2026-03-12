@@ -1,5 +1,5 @@
 import React from 'react';
-import Monushe from 'assets/Monushe.svg';
+import Monushe from 'assets/monushe.svg';
 import { Link } from 'react-router-dom';
 import FooterList from 'src/shared/FooterList';
 
