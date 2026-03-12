@@ -53,7 +53,7 @@ function Header() {
                 >
                   ABOUT
                 </Link>
-                {openList && (
+                {openList === 'OurStory' && (
                   <HeaderHoverList
                     aboutLinks={[
                       { link: 'OUR STORY', routeLink: 'OurStory' },
@@ -70,8 +70,35 @@ function Header() {
                   />
                 )}
               </li>
-              <li className="header__panel-navigation-shop">
-                <Link to="Shop">SHOP</Link>
+              <li
+                className="header__panel-navigation-shop relative"
+                onMouseLeave={() => {
+                  setOpenList('');
+                }}
+              >
+                <Link
+                  to="Catalog"
+                  onMouseEnter={() => {
+                    setOpenList('Catalog');
+                  }}
+                  onClick={() => {
+                    setOpenList('');
+                  }}
+                >
+                  CATALOG
+                </Link>
+                {openList === 'Catalog' && (
+                  <HeaderHoverList
+                    aboutLinks={[
+                      { link: 'BRACELETS', routeLink: 'Bracelets' },
+                      { link: 'BROOCHES', routeLink: 'Brooches' },
+                      { link: 'CHAINS', routeLink: 'Chains' },
+                      { link: 'EARRINGS', routeLink: 'EarRings' },
+                      { link: 'NECKLACE', routeLink: 'NeckLace' },
+                      { link: 'RINGS', routeLink: 'Rings' },
+                    ]}
+                  />
+                )}
               </li>
               <li className="header__panel-navigation-contacts">
                 <Link to="Contacts">CONTACTS</Link>
