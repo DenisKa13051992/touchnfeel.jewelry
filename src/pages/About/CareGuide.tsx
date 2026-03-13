@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CareGuide.scss';
 import chevron from 'src/assets/down-chevron.svg';
+import ImgPages from 'src/widgets/ImgPages';
 
 function CareGuide() {
   const [openHowShould, setOpenHowShould] = useState('');
@@ -8,13 +9,10 @@ function CareGuide() {
   const [openWhatIs, setOpenWhatIs] = useState('');
   const [openHowDo, setOpenHowDo] = useState('');
   const [openWhatAbout, setOpenWhatAbout] = useState('');
+  const imgTitle: string = 'CARE GUIDE AND WARRANTY';
   return (
     <div className="about-wrapper w-full flex flex-col items-center">
-      <section className="about__bgr w-full h-[400px] flex flex-row justify-center items-end">
-        <h1 className="about__bgr-title text-black text-h1 pb-10">
-          CARE GUIDE AND WARRANTY
-        </h1>
-      </section>
+      <ImgPages imgTitle={imgTitle} />
       <div className="care-guide-container w-full flex flex-col items-center">
         <section className="care-guide__one w-full mt-[120px] flex flex-row justify-center items-center">
           <div className="care-guide__one-content max-w-[996px] flex flex-col items-end justify-center">

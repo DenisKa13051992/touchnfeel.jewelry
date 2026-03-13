@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './FairPricing.scss';
 import chevron from 'src/assets/down-chevron.svg';
 import SocialMediaSection from 'src/shared/SocialMediaSection';
+import ImgPages from 'src/widgets/ImgPages';
 
 function FairPricing() {
   const [openSterling, setOpenSterling] = useState('');
@@ -12,13 +13,10 @@ function FairPricing() {
     'https://sun9-36.userapi.com/impg/FUynHnk6aLF75-sbi0YZcSHqe_aF733pYXos7Q/uiiq2BSFcMA.jpg?size=285x285&quality=95&sign=93429c4c3a05a4e1e793af3ec5adf3f6&type=album',
     'https://sun9-45.userapi.com/impg/X2R0nKHn1882onVYEP-d9_5-FvOGWKx54TLZqg/uz6m998sPSY.jpg?size=285x285&quality=95&sign=66abd203a12b84763300ab4a58058799&type=album',
   ];
+  const imgTitle: string = 'FAIR PRICING';
   return (
     <div className="about-wrapper w-full flex flex-col items-center">
-      <section className="about__bgr w-full h-[400px] flex flex-row justify-center items-end">
-        <h1 className="about__bgr-title text-black text-h1 pb-10">
-          FAIR PRICING
-        </h1>
-      </section>
+      <ImgPages imgTitle={imgTitle} />
       <div className="fair-pricing-container w-full flex flex-col items-center">
         <section className="fair-pricing-one w-cont h-[72px] mt-[120px] flex flex-row justify-center">
           <h5 className="fair-pricing-one-description text-h5 max-w-[996px] flex items-center">

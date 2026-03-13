@@ -1,13 +1,13 @@
 import React from 'react';
 import './OurStory.scss';
 import WelcomeSlider from 'src/features/WelcomeSlider';
+import ImgPages from 'src/widgets/ImgPages';
 
 function OurStory() {
+  const imgTitle: string = 'OUR STORY';
   return (
     <div className="about-wrapper w-full flex flex-col items-center">
-      <section className="about__bgr w-full h-[400px] flex flex-row justify-center items-end">
-        <h1 className="about__bgr-title text-black text-h1 pb-10">OUR STORY</h1>
-      </section>
+      <ImgPages imgTitle={imgTitle} />
       <div className="our-story-container w-cont flex flex-col items-center">
         <section className="our-story-one w-full h-[545px] mt-[120px] flex flex-row justify-between items-center">
           <div className="our-story-one-content w-[590px] h-[392px] flex flex-col">

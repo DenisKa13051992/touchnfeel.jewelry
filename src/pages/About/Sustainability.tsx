@@ -1,6 +1,7 @@
 import React from 'react';
 import './Sustainability.scss';
 import SocialMediaSection from 'src/shared/SocialMediaSection';
+import ImgPages from 'src/widgets/ImgPages';
 
 function Sustainability() {
   const fairPricingPictures: string[] = [
@@ -9,13 +10,10 @@ function Sustainability() {
     'https://sun9-36.userapi.com/impg/FUynHnk6aLF75-sbi0YZcSHqe_aF733pYXos7Q/uiiq2BSFcMA.jpg?size=285x285&quality=95&sign=93429c4c3a05a4e1e793af3ec5adf3f6&type=album',
     'https://sun9-45.userapi.com/impg/X2R0nKHn1882onVYEP-d9_5-FvOGWKx54TLZqg/uz6m998sPSY.jpg?size=285x285&quality=95&sign=66abd203a12b84763300ab4a58058799&type=album',
   ];
+  const imgTitle: string = 'SUSTAINABILITY';
   return (
     <div className="about-wrapper w-full flex flex-col items-center">
-      <section className="about__bgr w-full h-[400px] flex flex-row justify-center items-end">
-        <h1 className="about__bgr-title text-black text-h1 pb-10">
-          SUSTAINABILITY
-        </h1>
-      </section>
+      <ImgPages imgTitle={imgTitle} />
       <div className="sustainability-container w-full flex flex-col items-center">
         <section className="sustainability-one w-cont h-[72px] mt-[120px] flex flex-row justify-center">
           <h5 className="sustainability-one-description text-h5 max-w-[996px] flex items-center">
