@@ -52,6 +52,10 @@ module.exports = {
           lineHeight: '28px',
           fontWeight: '600',
         }],
+        'h4-lh-32': ['20px', {
+          lineHeight: '32px',
+          fontWeight: '600',
+        }],
         'h5': ['16px', {
           lineHeight: '24px',
           fontWeight: '400',
