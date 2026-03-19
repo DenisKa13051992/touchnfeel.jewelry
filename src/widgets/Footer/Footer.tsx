@@ -41,9 +41,9 @@ function Footer() {
             <FooterList
               footerLinksList={[
                 'GET IN TOUCH',
-                'Call:+370 (619) 15 889',
+                'Call:+48 (451) 815 889',
                 'E-mail:info@monushe.com',
-                'Address:Laisves g. 28-3, Vilnius, Lithuania',
+                'Address:ul. Botaniczna 43-8, Warsaw, Poland',
               ]}
             />
           </div>
